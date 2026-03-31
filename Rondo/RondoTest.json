@@ -1,0 +1,1500 @@
+{
+  "Name": "Rondo",
+  "CreationDate": "2026-3-18",
+  "Commands": [
+    {
+      "Command": "XType",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-03-31 13:28:57",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "init_variables",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${rondoUrl}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "spinCounter",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "50",
+      "Value": "maxSpins",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "2000",
+      "Value": "timeoutWait",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${spinCounter} >= ${maxSpins}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Dosažen maximální počet zatočení",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": "Zavři reklamu"
+    },
+    {
+      "Command": "echo",
+      "Target": "Kontroluji tlačítko ROZTOČIT RONDO ZDARMA v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//button[@id='spin-game-button']",
+      "Value": "2000"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[@id='spin-game-button']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 ================  Kliknuto na ROZTOČIT RONDO ZDARMA =================== v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "==========   TEST NA PŘÍTOMNOST TLAČÍTKA ZASTAVIT  =============== v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na ZASTAVIT v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterZastavit",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám tlačítko ZÍSKAT DALŠÍ TOČENÍ  v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "2",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(@class,'btn-success') and contains(text(),'Získat')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Tlačítko Získat další zatočení nalezeno – klikám v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'btn-success') and contains(text(),'Získat')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'Odměna')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Text Odměna byl nalezen. ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "28000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "==========   TEST NA KONEC (Koupit za)  =============== v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(., 'Koupit za')]",
+      "Value": "3",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Zatočení vyčerpána – konec hry v ${lastRun}",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "afterZastavit",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kontrola ZDVOJNÁSOBIT REKLAMOU v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1.5",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZDVOJNÁSOBIT REKLAMOU')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZDVOJNÁSOBIT REKLAMOU')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 klikám na ZDVOJNÁSOBIT REKLAMOU v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "TestandCloseAd",
+      "Value": "",
+      "Description": ""
+    },
+  
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeEval // new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo //  Hledám text 'V tomto kole můžete vyhrát:' v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "verifyElementPresent // xpath=//*[normalize-space(text())='V tomto kole můžete vyhrát:']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "if_v2 // ${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // games",
+      "Value": "",
+      "Description": "Skok na hry"
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám text 'vstup zdarma' v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'vstup zdarma')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "games",
+      "Value": "",
+      "Description": "Skok na hry"
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám text 'dokončení'",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'dokončení')]",
+      "Value": "foundText",
+      "Description": "zachytává minihry"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XRun",
+      "Target": "powershell",
+      "Value": "-c [console]::beep(1000,300)",
+      "Description": "Hlasitější beep"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": "Tady vyhodnotím, o jakou hru jde"
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám text 'správné číslo' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'správné číslo')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hra 'šťastné číslo' byla identifikována ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "StastneCislo",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám text 'Kámen' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'Kámen')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hra 'Kámen, nůžky, papír' byla identifikována ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "KamenNuzkyPapir",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám text 'Video Kvíz' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'Video Kvíz')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Video Kvíz byl identifikován ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "VideoKviz",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "games",
+      "Value": "",
+      "Description": "Skok na hry"
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "beforePokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám univerzální POKRAČOVAT v ${lastRun}",
+      "Value": "blue",
+      "Description": "=========  Počátek po clicku na ZASTAVIT ================"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na POKRAČOVAT v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kontrola SPUSTIT REKLAMU v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'SPUSTIT REKLAMU')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'SPUSTIT REKLAMU')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na SPUSTIT REKLAMU v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "30000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na POKRAČOVAT v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko CHCI DÍLEK DO EMAILU v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'CHCI DÍLEK DO')]",
+      "Value": "${timeoutWait}",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'CHCI DÍLEK DO')]",
+      "Value": "",
+      "Description": "🟢 Klik na tlačítko 'Chci dílek do emailu'"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na CHCI DÍLEK DO EMAILU v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko CHCI ZATOČENÍ ZDARMA v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(translate(., 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúůťďňó', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'CHCI ZATOČENÍ ZDARMA')]",
+      "Value": "5000",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'btn') and contains(@class,'btn-success') and contains(@class,'text-uppercase') and contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'CHCI ZATOČENÍ ZDARMA')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na CHCI ZATOČENÍ ZDARMA v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko ODMÍTNOUT VÝHRU v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ODMÍTNOUT VÝHRU')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'btn') and contains(@class,'btn-default') and normalize-space(text())='Odmítnout výhru']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na ODMÍTNOUT VÝHRU v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám Teď ne v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[normalize-space()='Teď ne']",
+      "Value": "3",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or self::span][contains(text(),'Teď ne')]",
+      "Value": "clickOk",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na 'Teď ne'",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // Hledám text 'Gratulujeme'",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeText // xpath=//*[contains(text(),'Gratulujeme')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "if_v2 // ${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // text 'Gratulujeme' byl nalezen",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "store // true",
+      "Value": "text_ok",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "else // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // DenyWin",
+      "Value": "",
+      "Description": "Odmítnout výhru"
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // Hledám text 'zaregistrovat'",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeText // xpath=//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'zaregistrovat')]",
+      "Value": "foundForbidden",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "if_v2 // ${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // 'zaregistrovat' nalezeno, skáču na odmítnout",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // DenyWin",
+      "Value": "",
+      "Description": "Skok na odmítnout"
+    },
+    {
+      "Command": "comment",
+      "Target": "else // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // Hledám text 'každý týden'",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeText // xpath=//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'každý týden')]",
+      "Value": "foundForbidden",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "if_v2 // ${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // 'každý týden' nalezeno, skáču na odmítnout",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // DenyWin",
+      "Value": "",
+      "Description": "Skok na odmítnout"
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // games",
+      "Value": "",
+      "Description": "Skok na hry"
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "DenyWin",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo // ====== Hledám hry, které se mají odehrát podle 'ODMÍTNOUT VÝHRU' v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "verifyElementPresent // xpath=(//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ODMÍTNOUT VÝHRU')])",
+      "Value": "",
+      "Description": "*****"
+    },
+    {
+      "Command": "comment",
+      "Target": "if_v2 // ${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "gotoLabel // games",
+      "Value": "",
+      "Description": "Skok na hry"
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko TEĎ NE, DĚKUJI v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(., 'Teď ne')]",
+      "Value": "${timeoutWait}",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(., 'Teď ne')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na TEĎ NE, DĚKUJI v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "------  Hledám Žádná výhra  --------- v ${lastRun}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "css=.draw-wrapper__swipes",
+      "Value": "swipeContent",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${swipeContent} == ''",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "==========  Žádná výhra – přeskočit ============= v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na zavření reklamy",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "endif // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return (parseInt(${spinCounter}) || 0) + 1;",
+      "Value": "spinCounter",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Dokončeno zatočení č. ${spinCounter} v ${lastRun} ✅",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "games",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🏆  Zahrajte si hru  🎮",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "XRun",
+      "Target": "powershell",
+      "Value": "-c [console]::beep(1000,300)",
+      "Description": "Hlasitější beep"
+    },
+    {
+      "Command": "prompt",
+      "Target": "Stiskni Confirm pro pokračování",
+      "Value": "userInput",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${rondoUrl}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "afterPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

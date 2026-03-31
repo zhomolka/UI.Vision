@@ -1,0 +1,63 @@
+
+{
+    "Name": "Klikani",
+    "CreationDate": "2026-01-28",
+    "Commands": [
+  {
+    "Command": "store",
+    "Target": "1700",
+    "Value": "x"
+  },
+  {
+    "Command": "store",
+    "Target": "80",
+    "Value": "y"
+  },
+
+  {
+    "Command": "store",
+    "Target": "1",
+    "Value": "i"
+  },
+
+  {
+    "Command": "while_v2",
+    "Target": "${i} <= 10",
+    "Value": ""
+  },
+
+  {
+    "Command": "XClick",
+    "Target": "${x},${y}",
+    "Value": ""
+  },
+
+  {
+    "Command": "echo",
+    "Target": "Klik číslo ${i} na ${x},${y}",
+    "Value": "blue"
+  },
+
+  {
+    "Command": "executeScript_Sandbox",
+    "Target": "return Number(${x}) + 20;",
+    "Value": "x"
+  },
+
+  {
+    "Command": "executeScript_Sandbox",
+    "Target": "return Number(${i}) + 1;",
+    "Value": "i"
+  },
+
+  {
+    "Command": "pause",
+    "Target": "300",
+    "Value": ""
+  },
+
+  {
+    "Command": "endWhile"
+  }
+]
+  }

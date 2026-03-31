@@ -1,0 +1,89 @@
+ {
+  "Name": "VideoKviz",
+  "CreationDate": "2026-3-3",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-03-30 10:39:44",
+      "Value": "black",
+      "Description": ""
+    },
+{
+      "Command": "run",
+      "Target": "Pokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Březovník obecný']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Uherský Brod']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Pavel Bolf']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Lanzarote']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Smetana ke šlehání']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Česká Lípa']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Kmín']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='3%']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Perlová bylina']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Listopad']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Bílý']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Vývar']/ancestor::button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class='answer__label' and text()='Sádlo']/ancestor::button",
+      "Value": ""
+    },
+   {
+      "Command": "prompt",
+      "Target": "Stiskni Confirm pro pokračování",
+      "Value": "userInput"
+    } 
+    
+ ]
+}

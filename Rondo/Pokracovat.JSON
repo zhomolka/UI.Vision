@@ -1,0 +1,62 @@
+ {
+  "Name": "Pokracovat",
+  "CreationDate": "2026-3-3",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Hledám univerzální POKRAČOVAT verze 2026-03-08 12:57:03",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na POKRAČOVAT v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+
+ ]
+}

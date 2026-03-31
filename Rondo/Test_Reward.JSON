@@ -1,0 +1,54 @@
+{
+  "Name": "Test_Reward",
+  "CreationDate": "2026-2-19",
+  "Commands": [
+   {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    }, 
+    {
+      "Command": "verifyElementPresent",
+      "Target": "id=btn-reward",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=btn-reward",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "30000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na zavření reklamy",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

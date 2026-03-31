@@ -1,0 +1,185 @@
+{
+    "Name": "Tipovacka",
+    "CreationDate": "2026-3-13",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-03-31 13:34:14",
+            "Value": "black",
+            "Description": ""
+        },
+        {
+            "Command": "label",
+            "Target": "start",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "open",
+            "Target": "https://www.rondo.cz/hry",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore",
+            "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//span[contains(text(),'Tipovačka')]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "1",
+            "Value": "!timeout_wait",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore",
+            "Description": ""
+        },
+        {
+            "Command": "verifyElementPresent",
+            "Target": "xpath=//span[contains(text(),'Čeká na váš tip!')]/ancestor::*[1]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${!LastCommandOK} == true",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//span[contains(text(),'Čeká na váš tip!')]/ancestor::*[1]",
+            "Value": ""
+        },
+        {
+            "Command": "else",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Prvek neexistuje, klik se neprovedl.",
+            "Value": ""
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "end",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "pause",
+            "Target": "1000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "storeAttribute",
+            "Target": "xpath=(//input[@name='answerValue'])[1]@data-prob",
+            "Value": "prob1"
+        },
+        {
+            "Command": "storeAttribute",
+            "Target": "xpath=(//input[@name='answerValue'])[2]@data-prob",
+            "Value": "prob2"
+        },
+        {
+            "Command": "echo",
+            "Target": "Hodnoty: 1=${prob1}, 2=${prob2}",
+            "Value": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${prob1} > ${prob2}",
+            "Value": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=(//input[@name='answerValue'])[1]/parent::label",
+            "Value": ""
+        },
+        {
+            "Command": "else",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=(//input[@name='answerValue'])[2]/parent::label",
+            "Value": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(text(),'Odeslat tip')]",
+            "Value": ""
+        },
+        {
+            "Command": "pause",
+            "Target": "6000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "1500,50",
+            "Value": "",
+            "Description": "Zavři reklamu"
+        },
+        {
+            "Command": "pause",
+            "Target": "5000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "1500,50",
+            "Value": "",
+            "Description": "Zavři reklamu"
+        },
+        {
+            "Command": "pause",
+            "Target": "5000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "1500,50",
+            "Value": "",
+            "Description": "Zavři reklamu"
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "start",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "label",
+            "Target": "end",
+            "Value": "",
+            "Description": ""
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "Name": "KamenNuzkyPapir",
+    "CreationDate": "2026-3-3",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-03-30 19:04:00",
+            "Value": "black",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Pokracovat",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "label",
+            "Target": "start",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "css=span.emoji-paper",
+            "Value": ""
+        },
+        {
+            "Command": "pause",
+            "Target": "1000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "storeText",
+            "Target": "xpath=//*[contains(text(),'Bohužel prohráváte')]",
+            "Value": "foundText",
+            "Description": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${!LastCommandOK} == true",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Pokracovat",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "else",
+            "Target": "",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "start",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Pokracovat",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Pokracovat",
+            "Value": "",
+            "Description": ""
+        }
+        
+    ]
+}

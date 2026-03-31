@@ -1,0 +1,66 @@
+{
+  "Name": "init_variables",
+  "CreationDate": "2026-01-08",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "=== Inicializace proměnných ===",
+      "Value": "blue"
+    },
+    {
+      "Command": "store",
+      "Target": "https://www.rondo.cz/hra/s/p/j48irf1vk",
+      "Value": "rondoUrl"
+    },
+    {
+      "Command": "store",
+      "Target": "3000",
+      "Value": "timeoutShort"
+    },
+    {
+      "Command": "store",
+      "Target": "8000",
+      "Value": "timeoutMedium"
+    },
+    {
+      "Command": "store",
+      "Target": "15000",
+      "Value": "timeoutLong"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "debugMode"
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "logClicks"
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "logXPath"
+    },
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "runMode"
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "safeMode"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "logStartEnd"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "logErrors"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "Name": "TestFrame",
+  "CreationDate": "2026-2-4",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[contains(.,'Jak za')]",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "reklama_detect"
+    },
+
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore"
+    },
+
+    {
+      "Command": "if_v2",
+      "Target": "${reklama_detect} == true"
+    },
+    {
+      "Command": "echo",
+      "Target": "Reklama nalezena v hlavním DOM",
+      "Value": "green"
+    },
+    {
+      "Command": "return"
+    },
+    {
+      "Command": "endif"
+    },
+
+    {
+      "Command": "storeXpathCount",
+      "Target": "xpath=//iframe",
+      "Value": "iframes"
+    },
+    {
+      "Command": "echo",
+      "Target": "Počet iframe: ${iframes}",
+      "Value": "blue"
+    },
+
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "idx"
+    },
+
+    {
+      "Command": "times",
+      "Target": "${iframes}",
+      "Value": ""
+    },
+
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${idx}) + 1;",
+      "Value": "idx"
+    },
+
+    {
+      "Command": "selectFrame",
+      "Target": "relative=top",
+      "Value": ""
+    },
+
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+
+    {
+      "Command": "selectFrame",
+      "Target": "index=${idx}",
+      "Value": ""
+    },
+
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "frame_ok"
+    },
+
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore"
+    },
+
+    {
+      "Command": "if_v2",
+      "Target": "${frame_ok} == false"
+    },
+    {
+      "Command": "echo",
+      "Target": "Nepřístupný iframe ${idx}, přeskočeno",
+      "Value": "orange"
+    },
+    {
+      "Command": "continue"
+    },
+    {
+      "Command": "endif"
+    },
+
+    {
+      "Command": "echo",
+      "Target": "========== TEST NA PŘÍTOMNOST HER číslo ${idx} ===============",
+      "Value": "blue"
+    },
+
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait"
+    },
+
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[contains(.,'jeden dílek') or contains(.,'Jak za') or contains(.,'Gratulujeme') or contains(.,'vstup zdarma') or contains(.,'Barevná ') or contains(.,'t hru')]",
+      "Value": ""
+    },
+
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "hra_detect"
+    },
+
+    {
+      "Command": "if_v2",
+      "Target": "${hra_detect} == true"
+    },
+    {
+      "Command": "echo",
+      "Target": "Nalezeno v iframe ${idx}",
+      "Value": "green"
+    },
+    {
+      "Command": "break"
+    },
+    {
+      "Command": "endif"
+    },
+
+    {
+      "Command": "end"
+    }
+  ]
+}

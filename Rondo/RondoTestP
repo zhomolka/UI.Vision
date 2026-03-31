@@ -1,0 +1,51 @@
+from playwright.sync_api import sync_playwright
+import time
+
+SESSION_FILE = "rondo_state.json"
+WRAP_SELECTOR = "#wrap"
+
+def click_rel(page, selector, rel_x, rel_y):
+    box = page.locator(selector).bounding_box()
+    abs_x = box["x"] + box["width"] * rel_x
+    abs_y = box["y"] + box["height"] * rel_y
+    page.mouse.click(abs_x, abs_y)
+    time.sleep(1)
+
+def ensure_session(context, page):
+    import os
+    if os.path.exists(SESSION_FILE):
+        print("Načítám uloženou session…")
+        return True
+
+    print("Session nenalezena — spusť login mód.")
+    page.goto("https://www.rondo.cz/")
+    print("Přihlas se ručně a klikni na 'Resume' v Playwright Inspectoru.")
+    page.pause()
+    context.storage_state(path=SESSION_FILE)
+    print("Session byla uložena.")
+    return True
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+
+    import os
+    if os.path.exists(SESSION_FILE):
+        context = browser.new_context(storage_state=SESSION_FILE)
+    else:
+        context = browser.new_context()
+
+    page = context.new_page()
+    ensure_session(context, page)
+
+    page.goto("https://www.rondo.cz/tree/")
+    page.wait_for_selector(WRAP_SELECTOR, state="visible", timeout=60000)
+
+    print("Herní kontejner #wrap nalezen — provádím kliky.")
+    click_rel(page, WRAP_SELECTOR, 0.32, 0.92)
+    click_rel(page, WRAP_SELECTOR, 0.40, 0.92)
+    click_rel(page, WRAP_SELECTOR, 0.45, 0.92)
+    click_rel(page, WRAP_SELECTOR, 0.50, 0.92)
+    click_rel(page, WRAP_SELECTOR, 0.68, 0.92)
+
+    time.sleep(5)
+    browser.close()

@@ -1,0 +1,32 @@
+{
+    "Name": "TestandCloseAd",
+    "CreationDate": "2026-3-3",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-03-31 13:17:09",
+            "Value": "black",
+            "Description": ""
+        },
+        {
+            "Command": "waitForElementPresent",
+            "Target": "xpath=//div[@class='continue-prompt-text' and text()='Zavřít']",
+            "Value": "30000"
+        },
+        {
+            "Command": "store",
+            "Target": "false",
+            "Value": "!errorIgnore"
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//div[@class='continue-prompt-text' and text()='Zavřít']"
+        },
+        {
+            "Command": "XClick",
+            "Target": "1500,50",
+            "Value": "",
+            "Description": ""
+        }
+    ]
+}

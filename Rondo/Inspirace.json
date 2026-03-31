@@ -1,0 +1,328 @@
+ Toto správně kliká na odměnu 15000:
+ {
+      "Command": "click",
+      "Target": "xpath=//button[@id='btn-reward']",
+      "Value": "",
+      "Description": ""
+    }
+
+{
+  "Name": "Email",
+  "CreationDate": "2026-1-28",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://zmail.zoner.com/?_task=mail&_mbox=INBOX",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"rcmrowMjQyMzQ2\"]/td[3]/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"rcmrowMjQyMzQ2\"]/td[3]/a/span",
+        "xpath=//tr[12]/td[3]/a/span",
+        "css=#rcmrowMjQyMzQ2 > td.subject > a > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"rcmrowMjQyMzQ2\"]/td[3]/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"rcmrowMjQyMzQ2\"]/td[3]/a/span",
+        "xpath=//tr[12]/td[3]/a/span",
+        "css=#rcmrowMjQyMzQ2 > td.subject > a > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"message-htmlpart1\"]/table/tbody/tr/td/table[4]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/div/a/span/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"message-htmlpart1\"]/table/tbody/tr/td/table[4]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/div/a/span/span",
+        "xpath=//a/span/span",
+        "css=#message-htmlpart1 > table > tbody > tr > td > table.v1row.v1row-4 > tbody > tr > td > table > tbody > tr > td > table.v1button_block.v1block-1 > tbody > tr > td > div > a > span > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=1",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"rondo-overlay\"]/div/div[2]/div[3]/div/div/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"rondo-overlay\"]/div/div[2]/div[3]/div/div/button",
+        "xpath=//div[3]/div/div/button",
+        "css=#rondo-overlay > div.content.content--thin > div.content__body.text-left > div.scroll-fixed > div > div > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"rondo-overlay\"]/div/div[2]/div[2]/div/div/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"rondo-overlay\"]/div/div[2]/div[2]/div/div/button",
+        "xpath=//div[2]/div/div/button",
+        "css=#rondo-overlay > div.content.content--thin > div.content__body > div.scroll-fixed > div > div > button"
+      ],
+      "Description": ""
+    }
+  ]
+}
+
+{
+      "Command": "verifyElementPresent",
+      "Target": "css=iframe#carodaPrebidRunner",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "caroda_detect"
+    },
+    {
+      "Command": "echo",
+      "Target": "Detekce Caroda reklamy: ${caroda_detect}",
+      "Value": "blue"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//iframe[contains(@id,'google_ads_iframe')]",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "googleads_detect"
+    },
+    {
+      "Command": "echo",
+      "Target": "Detekce Google Ads: ${googleads_detect}",
+      "Value": "blue"
+    },
+    {
+      "Command": "if",
+      "Target": "${caroda_detect} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Caroda reklama bezi – cisteni preskoceno",
+      "Value": "orange"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "cleaning_end",
+      "Value": ""
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "if",
+      "Target": "${googleads_detect} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Cistim reklamni vrstvy (Google Ads, SafeFrame, Rondo overlay)…",
+      "Value": "blue"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "(() => { const selectors=['.a05-container','#adx-container','div[id^=\"google_ads_iframe\"]','iframe[id^=\"google_ads_iframe\"]','ins[id^=\"gpt_unit_\"]','ins[data-google-query-id]','.a05-reward-modal','.a05-reward-modal__container','.a05-reward-modal__dialog','.a05-reward-modal__control-btn','#spinGameOutstream']; selectors.forEach(s=>document.querySelectorAll(s).forEach(e=>{e.style.opacity='0';e.style.pointerEvents='none';e.style.transform='translateX(-5000px)';e.style.zIndex='-1';})); })();",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "150",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Reklamni vrstvy vizualne odstraneny",
+      "Value": "green"
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "label",
+      "Target": "cleaning_end",
+      "Value": ""
+    },
+    {
+      "Command": "storeElementPresent",
+      "Target": "xpath=//div[contains(@class,'interstitial') or contains(@id,'overlay') or contains(@class,'modal') or contains(@class,'popup') or contains(@class,'ad') or contains(@class,'advert')]",
+      "Value": "reklama",
+      "Description": "Detekce překryvného okna reklamy"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${reklama} == true",
+      "Description": "Reklama je aktivní – spouštíme zavírání"
+    },
+    {
+      "Command": "echo",
+      "Target": "Reklama detekována – pokus o zavření",
+      "Value": "blue"
+    },
+    {
+      "Command": "focus",
+      "Target": "xpath=//div[contains(@class,'interstitial') or contains(@id,'overlay') or contains(@class,'modal') or contains(@class,'popup')]",
+      "Description": "Přepnutí fokusu na reklamu"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[@id='a05-custom-interstitial-close']",
+      "Description": "Primární zavírací tlačítko"
+    },
+    {
+      "Command": "click",
+      "Target": "id=close_button_icon",
+      "Description": "Alternativní ID"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@id='close_button_icon']",
+      "Description": "Alternativní div"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@id='close_button']",
+      "Description": "Další varianta"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//path[contains(@d,'38 12.83') or contains(@d,'35.17') or contains(@d,'24 21.17')]",
+      "Description": "SVG křížek – nejčastější varianta"
+    },
+    {
+      "Command": "storeElementPresent",
+      "Target": "xpath=//*[contains(@class,'close') or contains(@id,'close') or contains(@class,'x') or contains(@class,'btn-close')]",
+      "Value": "generic_close",
+      "Description": "Obecná detekce zavíracího prvku"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${generic_close} == \"true\""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[contains(@class,'close') or contains(@id,'close') or contains(@class,'x') or contains(@class,'btn-close')]",
+      "Description": "Klik na generické zavírací tlačítko"
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//button[@id='a05-custom-interstitial-close']",
+      "Value": "5,5",
+      "Description": "Fallback – clickAt na známé místo"
+    },
+ 
+    {
+      "Command": "storeElementPresent",
+      "Target": "xpath=//*[contains(.,'jeden dílek') or contains(.,'dokon') or contains(.,'Gratulujeme') or contains(.,'vstup zdarma') or contains(.,'Barevná ') or contains(.,'t hru')]",
+      "Value": "hra_detect",
+      "Description": "Detekce jakékoliv hry Rondo pomocí OR klauzulí"
+    },
+    {
+      "Command": "echo",
+      "Target": "====== hra_detect=${hra_detect}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${hra_detect} == \"true\"",
+      "Value": "",
+      "Description": "Pokud je detekována jakákoliv hra"
+    },
+
+    {
+  "Command": "storeText",
+  "Target": "xpath=//*[contains(text(),'Gratulujeme')]",
+  "Value": "foundText"
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == true",
+  "Value": ""
+},
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "text_ok"
+},
+{
+  "Command": "else",
+  "Target": "",
+  "Value": ""
+},
+{
+  "Command": "store",
+  "Target": "false",
+  "Value": "text_ok"
+},
+{
+  "Command": "endif"
+},
+{
+  "Command": "storeText",
+  "Target": "xpath=//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'zaregistrovat')]",
+  "Value": "foundForbidden"
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == true",
+  "Value": ""
+},
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "text_bad"
+},
+{
+  "Command": "else"
+},
+{
+  "Command": "store",
+  "Target": "false",
+  "Value": "text_bad"
+},
+{
+  "Command": "endif"
+},
+{
+  "Command": "if_v2",
+  "Target": "${text_ok} == \"true\" && ${text_bad} == \"false\"",
+  "Value": ""
+},
+{
+  "Command": "echo",
+  "Target": "OK: Text 'Gratulujeme' nalezen a 'zaregistrovat' se NEvyskytuje.",
+  "Value": "green"
+},
+{
+  "Command": "else"
+},
+{
+  "Command": "echo",
+  "Target": "FAIL: Podmínka nesplněna.",
+  "Value": "red"
+},
+{
+  "Command": "endif"
+}

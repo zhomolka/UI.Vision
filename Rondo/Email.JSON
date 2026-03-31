@@ -1,0 +1,259 @@
+{
+    "Name": "Email_Rondo",
+    "CreationDate": "2026-01-28",
+    "Commands": [
+        {
+            "Command": "XType",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-03-11 08:50:19",
+            "Value": "black"
+        },
+        {
+            "Command": "label",
+            "Target": "START"
+        },
+        {
+            "Command": "store",
+            "Target": "5",
+            "Value": "!timeout_pageload"
+        },
+        {
+            "Command": "open",
+            "Target": "https://zmail.zoner.com/?_task=mail&_mbox=INBOX"
+        },
+        {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore"
+        },
+        {
+            "Command": "waitForElementPresent",
+            "Target": "css=#messagelist",
+            "Value": "8000"
+        },
+        {
+            "Command": "pause",
+            "Target": "500"
+        },
+        {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore"
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//tr[contains(@class,'unread')][td[contains(@class,'from')]//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'rondo')]]/td[contains(@class,'subject')]/a"
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${!LastCommandOK} == false"
+        },
+        {
+            "Command": "echo",
+            "Target": "🏁 Žádný e-mail od Rondo nenalezen. Skript končí.",
+            "Value": "red"
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "END"
+        },
+        {
+            "Command": "end"
+        },
+        {
+            "Command": "clickAndWait",
+            "Target": "xpath=//tr[contains(@class,'unread')][td[contains(@class,'from')]//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'rondo')]]/td[contains(@class,'subject')]/a"
+        },
+        {
+            "Command": "echo",
+            "Target": "🟢 Kliknuto na Rondo mail",
+            "Value": "green"
+        },
+        {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore",
+            "Description": ""
+        },
+        {
+            "Command": "storeEval",
+            "Target": "new Date().toLocaleString('cs-CZ')",
+            "Value": "lastRun",
+            "Description": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Kontrola Vyzvednout v ${lastRun}",
+            "Value": "blue",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "1.5",
+            "Value": "!timeout_wait",
+            "Description": ""
+        },
+        {
+            "Command": "verifyElementPresent",
+            "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${!LastCommandOK} == true",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "🟢 klikám na VYZVEDNOUT v ${lastRun}",
+            "Value": "green",
+            "Description": ""
+        },
+        {
+            "Command": "else",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "storeEval",
+            "Target": "new Date().toLocaleString('cs-CZ')",
+            "Value": "lastRun",
+            "Description": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Kontrola Otevřít dárek v ${lastRun}",
+            "Value": "blue",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "1.5",
+            "Value": "!timeout_wait",
+            "Description": ""
+        },
+        {
+            "Command": "verifyElementPresent",
+            "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${!LastCommandOK} == true",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "🟢 klikám na OTEVŘÍT DÁREK v ${lastRun}",
+            "Value": "green",
+            "Description": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "selectWindow",
+            "Target": "tab=1"
+        },
+        {
+            "Command": "waitForPageToLoad",
+            "Target": "2000"
+        },
+        {
+            "Command": "waitForElementNotPresent",
+            "Target": "xpath=//button[contains(@class,'btn-next') and contains(@class,'disabled')]",
+            "Value": "2000"
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(@class,'btn-next')]"
+        },
+        {
+            "Command": "echo",
+            "Target": "🟢 Kliknuto na btn-next",
+            "Value": "green"
+        },
+        {
+            "Command": "store",
+            "Target": "${!LastCommandOK}",
+            "Value": "clickOk"
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${clickOk} == false"
+        },
+        {
+            "Command": "selectFrame",
+            "Target": "index=0"
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(@class,'btn-next') and not(contains(@class,'disabled'))]"
+        },
+        {
+            "Command": "echo",
+            "Target": "🟢 Provedeno selectFrame a kliknuto na btn-next",
+            "Value": "green"
+        },
+        {
+            "Command": "end"
+        },
+        {
+            "Command": "selectWindow",
+            "Target": "tab=1"
+        },
+        {
+            "Command": "pause",
+            "Target": "500"
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(@class,'btn-next')]"
+        },
+        {
+            "Command": "pause",
+            "Target": "800"
+        },
+        {
+            "Command": "selectWindow",
+            "Target": "TAB=CLOSE"
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "START"
+        },
+        {
+            "Command": "label",
+            "Target": "END"
+        }
+    ]
+}

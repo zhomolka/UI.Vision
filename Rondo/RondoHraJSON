@@ -1,0 +1,310 @@
+{
+  "Name": "RondoHra",
+  "CreationDate": "2026-1-19",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-02-23 11:21:11",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/hra/rondonova-hra",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait",
+      "Description": "Toto je systémová proměnná"
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "Counter",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "50",
+      "Value": "maxCount",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${Counter} >= ${maxCount}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Dosažen maximální počet testů",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${Counter}",
+      "Value": "C",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${C}",
+      "Value": "Cstr",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${Cstr.substring(${Cstr.length}-1)}",
+      "Value": "lastDigit",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "0 == 0",
+      "Value": "",
+      "Description": "${lastDigit} "
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko 'Získat za reklamu' v ${lastRun}.",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "selectFrame // xpath=//iframe[contains(@id,'google_ads_iframe')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait"
+    },
+    {
+      "Command": "XClick",
+      "Target": "480,550",
+      "Value": "",
+      "Description": "Odměna za reklamu"
+    },
+    {
+      "Command": "XClick",
+      "Target": "480,620",
+      "Value": "",
+      "Description": "Odměna za reklamu"
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na tlačítko 'Získat za reklamu' v ${lastRun}.",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZÍSKAT ZA REKLAMU')]",
+      "Value": "1",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'small-game-credit-card__button')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Kliknuto na tlačítko 'Získat za reklamu' v ${lastRun}.",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "selectFrame",
+      "Target": "relative=top",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko 'Hledám tlačítko vložit' v ${lastRun}.",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+    {
+      "Command": "store",
+      "Target": "0.1",
+      "Value": "!timeout_wait"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(normalize-space(.), 'Vložit')]",
+      "Value": "0.3",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "echo //Tlačítko Vložit je na stránce!",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Vložit není na stránce.",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "css=.current-game-value__value",
+      "Value": "currentValue"
+    },
+    {
+      "Command": "storeText",
+      "Target": "css=.remaining-time.seconds .number span",
+      "Value": "remainingTime"
+    },
+    {
+      "Command": "echo",
+      "Target": "Zbývající čas: ${remainingTime} Vsazeno rondonů = ${currentValue}",
+      "Value": "black"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!csvReadStatus} == true",
+      "Value": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "parseInt(${currentValue})",
+      "Value": "cv"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "parseInt(${remainingTime})",
+      "Value": "rt"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${cv} < 1500 && ${rt} < 5",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢➡️ Podmínka splněna: vkládám 1500",
+      "Value": "green"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(.,'1500')]",
+      "Value": ""
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

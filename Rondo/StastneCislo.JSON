@@ -1,0 +1,224 @@
+ {
+  "Name": "",
+  "CreationDate": "2026-3-3",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-03-11 09:05:12",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='6']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " Hledám text 'velké' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'velké')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='3']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto 6 Hledám text 'velké' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'velké')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='2']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto 2 ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='4']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto 4 ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+
+
+
+
+
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='8']",
+      "Value": "",
+      "Description": ""
+    },
+{
+      "Command": "echo",
+      "Target": "Kliknuto 8, hledám text 'velké' ",
+      "Value": "blue",
+      "Description": ""
+    },
+    
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[contains(text(),'velké')]",
+      "Value": "foundText",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='7']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto 7 ",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='9']",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto 9",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+     {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
+      "Value": "",
+      "Description": ""
+    }
+ ]
+}

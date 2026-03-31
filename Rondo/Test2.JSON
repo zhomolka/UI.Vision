@@ -1,0 +1,41 @@
+{
+  "Name": "test_rcmloginsubmit_click",
+  "CreationDate": "2026-02-06",
+  "Commands": [
+    {
+      "Command": "storeElementPresent",
+      "Target": "id=rcmloginsubmit",
+      "Value": "btnPresent"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${btnPresent} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Přihlásit nalezeno, klikám...",
+      "Value": "green"
+    },
+    {
+      "Command": "click",
+      "Target": "id=rcmloginsubmit",
+      "Value": ""
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Přihlásit se neobjevilo.",
+      "Value": "red"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}

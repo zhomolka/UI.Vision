@@ -1,0 +1,115 @@
+{
+  "Name": "Rondonovnik",
+  "CreationDate": "2026-2-6",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-03-17 08:52:57",
+      "Value": "black"
+    },
+    {
+      "Command": "open",
+      "Target": " https://www.rondo.cz/tree/",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    
+       {
+      "Command": "XClick",
+      "Target": "880,460",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
+    {
+      "Command": "XClick",
+      "Target": "900,460",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
+    {
+      "Command": "XClick",
+      "Target": "1100,460",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
+    {
+      "Command": "XClick",
+      "Target": "1700,480",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "900,480",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
+    {
+      "Command": "times",
+      "Target": "3",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "725,490",
+      "Value": "",
+      "Description": "hNOJIVO"
+    },
+    {
+      "Command": "XClick",
+      "Target": "875,530",
+      "Value": "",
+      "Description": "Nůžky"
+    },
+    {
+      "Command": "XClick",
+      "Target": "725,530",
+      "Value": "",
+      "Description": "hNOJIVO"
+    },
+    {
+      "Command": "XClick",
+      "Target": "875,490",
+      "Value": "",
+      "Description": "Nůžky"
+    },
+    {
+      "Command": "end"
+    },
+    {
+      "Command": "XClick",
+      "Target": "800,490",
+      "Value": "",
+      "Description": "Postřik"
+    },
+    {
+      "Command": "XClick",
+      "Target": "650,490",
+      "Value": "",
+      "Description": "kONEV"
+    },
+    {
+      "Command": "XClick",
+      "Target": "800,530",
+      "Value": "",
+      "Description": "Postřik"
+    },
+    {
+      "Command": "XClick",
+      "Target": "650,530",
+      "Value": "",
+      "Description": "kONEV"
+    }
+  ]
+}

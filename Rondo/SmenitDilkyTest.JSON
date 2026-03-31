@@ -1,0 +1,170 @@
+{
+  "Name": "SmenitDilkyTest2",
+  "CreationDate": "2026-1-14",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-03-17 09:59:20",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://www.rondo.cz/uzivatel/moje-puzzle-dilky?puzzleTab=finished",
+      "Value": "targetURL"
+    },
+    {
+      "Command": "open",
+      "Target": "${targetURL}",
+      "Value": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.querySelectorAll(\"a.btn-exchange:not(.disabled)\").length",
+      "Value": "exchangeEnabled",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${exchangeEnabled} > 0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//a[contains(text(),'Směnit dílky')][not(contains(@class,'disabled'))]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto na aktivní SMĚNIT DÍLKY",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${exchangeEnabled} == 0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko SMĚNIT DÍLKY je deaktivované – neklikám a končím",
+      "Value": "blue"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "loopPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": "Zavři reklamu"
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.evaluate(\"count(//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'POKRAČOVAT')])\", document, null, XPathResult.NUMBER_TYPE, null).numberValue",
+      "Value": "pokracovatCount",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${pokracovatCount} > 0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "new Date().toLocaleString('cs-CZ')",
+      "Value": "lastRun"
+    },
+    {
+      "Command": "echo",
+      "Target": "Klikám na POKRAČOVAT v ${lastRun}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'POKRAČOVAT')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "loopPokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Směna dílků dokončena",
+      "Value": "green",
+      "Description": ""
+    }
+  ]
+}
