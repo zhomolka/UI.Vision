@@ -1,0 +1,11 @@
+2026/01/29-16:17:21.847 22a4 Creating DB \\Apl-nas\zhomolka\Soukrome\STUDIUM\AI\SW\rondo-profil\Default\IndexedDB\https_www.rondo.cz_0.indexeddb.leveldb since it was missing.
+2026/01/29-16:17:22.188 22a4 Reusing MANIFEST \\Apl-nas\zhomolka\Soukrome\STUDIUM\AI\SW\rondo-profil\Default\IndexedDB\https_www.rondo.cz_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/29-16:17:22.525 30bc Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/29-16:17:22.994 2974 Level-0 table #5: started
+2026/01/29-16:17:23.170 2974 Level-0 table #5: 1894 bytes OK
+2026/01/29-16:17:23.210 2974 Delete type=0 #3
+2026/01/29-16:17:23.237 4de4 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/29-16:18:15.494 22a4 Level-0 table #7: started
+2026/01/29-16:18:15.626 22a4 Level-0 table #7: 647 bytes OK
+2026/01/29-16:18:15.720 22a4 Delete type=0 #4
+2026/01/29-16:18:15.760 5124 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

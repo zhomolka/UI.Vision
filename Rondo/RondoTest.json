@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-03-31 13:28:57",
+      "Target": "Verze skriptu: 2026-04-01 09:07:33",
       "Value": "black",
       "Description": ""
     },
@@ -308,8 +308,8 @@
       "Description": ""
     },
     {
-      "Command": "pause",
-      "Target": "28000",
+      "Command": "run",
+      "Target": "TestandCloseAd",
       "Value": "",
       "Description": ""
     },
@@ -807,20 +807,14 @@
       "Description": ""
     },
     {
-      "Command": "pause",
-      "Target": "30000",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "run",
+      "Target": "TestandCloseAd",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "pause",
-      "Target": "3000",
+      "Target": "2000",
       "Value": "",
       "Description": ""
     },
@@ -965,7 +959,7 @@
     {
       "Command": "verifyElementPresent",
       "Target": "xpath=//button[contains(translate(., 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúůťďňó', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'CHCI ZATOČENÍ ZDARMA')]",
-      "Value": "5000",
+      "Value": "3000",
       "Description": ""
     },
     {

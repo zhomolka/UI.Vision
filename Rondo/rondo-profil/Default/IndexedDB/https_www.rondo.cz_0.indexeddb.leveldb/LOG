@@ -1,0 +1,13 @@
+2026/01/29-16:30:35.638 5d14 Reusing MANIFEST \\Apl-nas\zhomolka\Soukrome\STUDIUM\AI\SW\rondo-profil\Default\IndexedDB\https_www.rondo.cz_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/29-16:30:35.760 5d14 Recovering log #6
+2026/01/29-16:30:35.840 5d14 Reusing old log \\Apl-nas\zhomolka\Soukrome\STUDIUM\AI\SW\rondo-profil\Default\IndexedDB\https_www.rondo.cz_0.indexeddb.leveldb/000006.log 
+2026/01/29-16:30:36.280 553c Level-0 table #10: started
+2026/01/29-16:30:36.455 553c Level-0 table #10: 643 bytes OK
+2026/01/29-16:30:36.565 553c Delete type=0 #6
+2026/01/29-16:30:36.640 553c Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\x05' @ 116 : 1
+2026/01/29-16:30:36.646 553c Compacting 1@0 + 1@1 files
+2026/01/29-16:30:36.822 553c Generated table #11@0: 13 keys, 643 bytes
+2026/01/29-16:30:36.846 553c Compacted 1@0 + 1@1 files => 643 bytes
+2026/01/29-16:30:36.876 553c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/29-16:30:36.942 553c Delete type=2 #10
+2026/01/29-16:30:36.984 553c Manual compaction at level-0 from '\x00\x05\x00\x00\x05' @ 116 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
