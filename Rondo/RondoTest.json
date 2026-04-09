@@ -1,6 +1,6 @@
 {
-  "Name": "Rondo",
-  "CreationDate": "2026-3-18",
+  "Name": "RondoTest",
+  "CreationDate": "2026-4-9",
   "Commands": [
     {
       "Command": "XType",
@@ -107,7 +107,8 @@
     {
       "Command": "waitForElementPresent",
       "Target": "xpath=//button[@id='spin-game-button']",
-      "Value": "2000"
+      "Value": "2000",
+      "Description": ""
     },
     {
       "Command": "if_v2",
@@ -433,7 +434,6 @@
       "Value": "",
       "Description": ""
     },
-  
     {
       "Command": "gotoLabel",
       "Target": "afterPokracovat",

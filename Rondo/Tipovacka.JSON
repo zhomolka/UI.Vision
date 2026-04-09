@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-03-31 13:34:14",
+            "Target": "Verze skriptu: 2026-04-08 10:50:20",
             "Value": "black",
             "Description": ""
         },
@@ -16,22 +16,11 @@
         },
         {
             "Command": "open",
-            "Target": "https://www.rondo.cz/hry",
+            "Target": "https://www.rondo.cz/tipovacka",
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "store",
-            "Target": "true",
-            "Value": "!errorIgnore",
-            "Description": ""
-        },
-        {
-            "Command": "click",
-            "Target": "xpath=//span[contains(text(),'Tipovačka')]",
-            "Value": "",
-            "Description": ""
-        },
+        
         {
             "Command": "store",
             "Target": "1",
@@ -46,9 +35,8 @@
         },
         {
             "Command": "verifyElementPresent",
-            "Target": "xpath=//span[contains(text(),'Čeká na váš tip!')]/ancestor::*[1]",
-            "Value": "",
-            "Description": ""
+            "Target": "xpath=//span[contains(@class,'badge--cta') and contains(text(),'Čeká na váš tip!')]",
+            "Value": ""
         },
         {
             "Command": "if_v2",
@@ -68,7 +56,7 @@
         },
         {
             "Command": "echo",
-            "Target": "Prvek neexistuje, klik se neprovedl.",
+            "Target": "Prvek 'Čeká na váš tip!' nebyl nalezen.",
             "Value": ""
         },
         {
