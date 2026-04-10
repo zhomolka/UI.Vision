@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-03-13 11:04:34",
+            "Target": "Verze skriptu: 2026-04-10 11:25:14",
             "Value": "black",
             "Description": ""
         },
@@ -14,9 +14,15 @@
             "Value": "",
             "Description": ""
         },
-            {
+        {
             "Command": "run",
             "Target": "Tipovacka",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Pexeso",
             "Value": "",
             "Description": ""
         },
@@ -26,7 +32,6 @@
             "Value": "",
             "Description": ""
         },
-        
         {
             "Command": "run",
             "Target": "SmenitDilky",

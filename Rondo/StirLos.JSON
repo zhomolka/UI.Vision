@@ -1,16 +1,16 @@
 {
-    "Name": "Pexeso",
+    "Name": "StirLos",
     "CreationDate": "2026-3-13",
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-10 11:19:23",
+            "Target": "Verze skriptu: 2026-04-10 11:28:35",
             "Value": "black",
             "Description": ""
         },
         {
             "Command": "open",
-            "Target": "https://www.rondo.cz/hra/losy-plus/top-list",
+            "Target": "https://www.rondo.cz/hra/losy/top-list",
             "Value": "",
             "Description": ""
         },
@@ -140,7 +140,7 @@
         },
         {
             "Command": "if_v2",
-            "Target": "${i} < 19",
+            "Target": "${i} < 1",
             "Value": "",
             "Description": ""
         },
