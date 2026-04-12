@@ -1,0 +1,24 @@
+{
+    "Name": "Wait",
+    "CreationDate": "2026-3-3",
+    "Commands": [
+        {
+            "Command": "XRun",
+            "Target": "powershell",
+            "Value": "-c [console]::beep(1000,300)",
+            "Description": "Hlasitější beep"
+        },
+        {
+            "Command": "prompt",
+            "Target": "Stiskni Confirm pro pokračování",
+            "Value": "userInput",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "1500,50",
+            "Value": "",
+            "Description": ""
+        }
+    ]
+}

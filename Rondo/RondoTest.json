@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-01 09:07:33",
+      "Target": "Verze skriptu: 2026-04-12 12:53:21",
       "Value": "black",
       "Description": ""
     },
@@ -1455,23 +1455,12 @@
       "Description": ""
     },
     {
-      "Command": "XRun",
-      "Target": "powershell",
-      "Value": "-c [console]::beep(1000,300)",
-      "Description": "Hlasitější beep"
-    },
-    {
-      "Command": "prompt",
-      "Target": "Stiskni Confirm pro pokračování",
-      "Value": "userInput",
-      "Description": ""
-    },
-    {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "run",
+      "Target": "Wait",
       "Value": "",
       "Description": ""
     },
+  
     {
       "Command": "open",
       "Target": "${rondoUrl}",

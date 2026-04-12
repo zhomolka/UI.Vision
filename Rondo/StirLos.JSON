@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-10 11:28:35",
+            "Target": "Verze skriptu: 2026-04-12 12:59:20",
             "Value": "black",
             "Description": ""
         },
@@ -107,6 +107,18 @@
             "Target": "xpath=//button[contains(text(),'Nový los')]",
             "Value": "",
             "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Wait",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "gotoLabel",
+            "Target": "end",
+            "Value": "",
+            "Description": "Provizorní odskok natvrdo"
         },
         {
             "Command": "store",

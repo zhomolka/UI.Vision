@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-10 11:25:14",
+            "Target": "Verze skriptu: 2026-04-12 13:02:13",
             "Value": "black",
             "Description": ""
         },
@@ -77,6 +77,13 @@
             "Value": "",
             "Description": ""
         },
+        {
+            "Command": "run",
+            "Target": "StirLos",
+            "Value": "",
+            "Description": ""
+        },
+
         {
             "Command": "run",
             "Target": "RondoHra",
