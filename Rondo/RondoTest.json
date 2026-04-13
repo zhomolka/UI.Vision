@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-12 12:53:21",
+      "Target": "Verze skriptu: 2026-04-13 10:13:20",
       "Value": "black",
       "Description": ""
     },
@@ -244,7 +244,7 @@
     },
     {
       "Command": "store",
-      "Target": "2",
+      "Target": "4",
       "Value": "!timeout_wait",
       "Description": ""
     },

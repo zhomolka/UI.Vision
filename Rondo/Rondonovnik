@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-03-17 08:52:57",
+      "Target": "Verze skriptu: 2026-04-13 10:10:17",
       "Value": "black"
     },
     {
@@ -14,7 +14,13 @@
     },
     {
       "Command": "pause",
-      "Target": "3000",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+       {
+      "Command": "XType",
+      "Target": "^0",
       "Value": "",
       "Description": ""
     },

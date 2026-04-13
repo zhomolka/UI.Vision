@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-01 09:35:22",
+            "Target": "Verze skriptu: 2026-04-13 10:18:33",
             "Value": "black",
             "Description": ""
         },
@@ -15,8 +15,14 @@
             "Description": ""
         },
         {
-            "Command": "waitForElementPresent",
-            "Target": "xpath=//div[@class='continue-prompt-text' and text()='Zavřít']",
+            "Command": "pause",
+            "Target": "30000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "comment",
+            "Target": "waitForElementPresent // xpath=//div[@class='continue-prompt-text' and text()='Zavřít']",
             "Value": "30000"
         },
         {

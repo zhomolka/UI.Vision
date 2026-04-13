@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-03-30 19:04:00",
+            "Target": "Verze skriptu: 2026-04-13 15:30:15",
             "Value": "black",
             "Description": ""
         },
@@ -54,6 +54,11 @@
             "Target": "",
             "Value": "",
             "Description": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(@class,'btn-next') and normalize-space()='Zkusit znovu']",
+            "Value": ""
         },
         {
             "Command": "gotoLabel",
