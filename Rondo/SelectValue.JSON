@@ -1,0 +1,187 @@
+{
+  "Name": "SelectValue",
+  "CreationDate": "2026-4-13",
+  "Commands": [
+    
+       {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorignore",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "1) Klik podle textu odpovědi",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[.//div[contains(@class,'text') and normalize-space()='${MyValue}']]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!lastCommandOK}",
+      "Value": "clickedText",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${clickedText} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "2) Klik podle číselného labelu (1–9)",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[.//div[@class='answer__label' and normalize-space()='${MyValue}']]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!lastCommandOK}",
+      "Value": "clickedLabel",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${clickedLabel} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "3) Klik podle písmen (A–F)",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'answer') and .//div[@class='answer__label' and normalize-space()='${MyValue}']]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!lastCommandOK}",
+      "Value": "clickedLetter",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${clickedLetter} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "4) Klik podle libovolného výskytu textu",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[.//*[normalize-space()='${MyValue}']]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!lastCommandOK}",
+      "Value": "clickedAny",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${clickedAny} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "5) Klik podle indexu (pro 10–99 nebo grafiku)",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${MyValue}) % 10;",
+      "Value": "index",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//button[contains(@class,'answer')])[${index}]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!lastCommandOK}",
+      "Value": "clickedIndex",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${clickedIndex} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "6) Failsafe – klik na první odpověď",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//button[contains(@class,'answer')])[1]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorignore",
+      "Description": ""
+    }
+  ]
+}
