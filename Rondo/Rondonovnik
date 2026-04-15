@@ -1,16 +1,18 @@
 {
   "Name": "Rondonovnik",
-  "CreationDate": "2026-2-6",
+  "CreationDate": "2026-4-15",
   "Commands": [
     {
       "Command": "echo",
       "Target": "Verze skriptu: 2026-04-13 10:10:17",
-      "Value": "black"
+      "Value": "black",
+      "Description": ""
     },
     {
       "Command": "open",
       "Target": " https://www.rondo.cz/tree/",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "pause",
@@ -18,14 +20,13 @@
       "Value": "",
       "Description": ""
     },
-       {
+    {
       "Command": "XType",
       "Target": "^0",
       "Value": "",
       "Description": ""
     },
-    
-       {
+    {
       "Command": "XClick",
       "Target": "880,460",
       "Value": "",
@@ -64,7 +65,8 @@
     {
       "Command": "times",
       "Target": "3",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "XClick",
@@ -91,7 +93,10 @@
       "Description": "Nůžky"
     },
     {
-      "Command": "end"
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "XClick",
@@ -106,14 +111,14 @@
       "Description": "kONEV"
     },
     {
-      "Command": "XClick",
-      "Target": "800,530",
+      "Command": "comment",
+      "Target": "XClick // 800,530",
       "Value": "",
       "Description": "Postřik"
     },
     {
-      "Command": "XClick",
-      "Target": "650,530",
+      "Command": "comment",
+      "Target": "XClick // 650,530",
       "Value": "",
       "Description": "kONEV"
     }

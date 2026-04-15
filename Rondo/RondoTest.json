@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-13 10:13:20",
+      "Target": "Verze skriptu: 2026-04-15 10:16:36",
       "Value": "black",
       "Description": ""
     },
@@ -154,12 +154,6 @@
     },
     {
       "Command": "store",
-      "Target": "true",
-      "Value": "!errorIgnore",
-      "Description": ""
-    },
-    {
-      "Command": "store",
       "Target": "0.1",
       "Value": "!timeout_wait",
       "Description": ""
@@ -174,6 +168,12 @@
       "Command": "echo",
       "Target": "==========   TEST NA PŘÍTOMNOST TLAČÍTKA ZASTAVIT  =============== v ${lastRun}",
       "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
       "Description": ""
     },
     {
@@ -447,42 +447,6 @@
       "Description": ""
     },
     {
-      "Command": "comment",
-      "Target": "storeEval // new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "echo //  Hledám text 'V tomto kole můžete vyhrát:' v ${lastRun}",
-      "Value": "blue",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "verifyElementPresent // xpath=//*[normalize-space(text())='V tomto kole můžete vyhrát:']",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "if_v2 // ${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "gotoLabel // games",
-      "Value": "",
-      "Description": "Skok na hry"
-    },
-    {
-      "Command": "comment",
-      "Target": "endif // ",
-      "Value": "",
-      "Description": ""
-    },
-    {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
       "Value": "lastRun",
@@ -495,29 +459,24 @@
       "Description": ""
     },
     {
-      "Command": "storeText",
-      "Target": "xpath=//*[contains(text(),'vstup zdarma')]",
-      "Value": "foundText",
-      "Description": ""
+      "Command": "storeEval",
+      "Target": "document.body.innerText.toLowerCase().includes('vstup zdarma')",
+      "Value": "found"
     },
     {
       "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
+      "Target": "${found} == true",
+      "Value": ""
     },
     {
       "Command": "gotoLabel",
       "Target": "games",
-      "Value": "",
-      "Description": "Skok na hry"
+      "Value": ""
     },
     {
-      "Command": "endif",
-      "Target": "",
-      "Value": "",
-      "Description": ""
+      "Command": "endif"
     },
+    
     {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
@@ -813,44 +772,8 @@
       "Description": ""
     },
     {
-      "Command": "pause",
-      "Target": "2000",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "click",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "storeEval",
-      "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 Kliknuto na POKRAČOVAT v ${lastRun}",
-      "Value": "green",
-      "Description": ""
-    },
-    {
-      "Command": "endif",
-      "Target": "",
+      "Command": "run",
+      "Target": "Pokracovat",
       "Value": "",
       "Description": ""
     },
@@ -1413,12 +1336,6 @@
       "Description": ""
     },
     {
-      "Command": "comment",
-      "Target": "endif // ",
-      "Value": "",
-      "Description": ""
-    },
-    {
       "Command": "executeScript_Sandbox",
       "Target": "return (parseInt(${spinCounter}) || 0) + 1;",
       "Value": "spinCounter",
@@ -1460,7 +1377,6 @@
       "Value": "",
       "Description": ""
     },
-  
     {
       "Command": "open",
       "Target": "${rondoUrl}",

@@ -1,0 +1,54 @@
+{
+  "Name": "SmartSelect",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "[\"Březovník obecný\",\"Uherský Brod\",\"Pavel Bolf\",\"Lanzarote\",\"Smetana ke šlehání\",\"Česká Lípa\",\"Kmín\",\"3%\",\"Perlová bylina\",\"Listopad\",\"Bílý\",\"Vývar\",\"Sádlo\"]",
+      "Value": "myList"
+    },
+
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var buttons = document.querySelectorAll('button.answer'); var results = []; buttons.forEach(function(btn){ var t = btn.querySelector('.answer__text'); var l = btn.querySelector('.answer__label'); var val = ''; if(t && t.innerText.trim()!='') val = t.innerText.trim(); else if(l && l.innerText.trim()!='') val = l.innerText.trim(); else val = ''; results.push(val); }); return results;",
+      "Value": "answers"
+    },
+
+    {
+      "Command": "comment",
+      "Target": "Najdeme index shody",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var list = JSON.parse(${myList}); var ans = ${answers}; for(var i=0;i<ans.length;i++){ if(list.includes(ans[i])) return i+1; } return -1;",
+      "Value": "matchIndex"
+    },
+
+    {
+      "Command": "if",
+      "Target": "${matchIndex} > 0",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//button[contains(@class,'answer')])[${matchIndex}]",
+      "Value": ""
+    },
+    {
+      "Command": "else"
+    },
+    {
+      "Command": "comment",
+      "Target": "Fallback – klik na první odpověď",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//button[contains(@class,'answer')])[1]",
+      "Value": ""
+    },
+    {
+      "Command": "endif"
+    }
+  ]
+}

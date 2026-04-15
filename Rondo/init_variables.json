@@ -9,8 +9,13 @@
     },
     {
       "Command": "store",
-      "Target": "https://www.rondo.cz/hra/s/p/j48irf1vk",
+      "Target": "https://www.rondo.cz/hra/s/p/jn43woh2i",
       "Value": "rondoUrl"
+    },
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed"
     },
     {
       "Command": "store",
