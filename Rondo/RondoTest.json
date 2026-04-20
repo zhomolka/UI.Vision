@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-15 10:16:36",
+      "Target": "Verze skriptu: 2026-04-20 10:32:38",
       "Value": "black",
       "Description": ""
     },
@@ -93,6 +93,12 @@
       "Description": "Zavři reklamu"
     },
     {
+      "Command": "store",
+      "Target": "medium",
+      "Value": "!replayspeed",
+      "Description": ""
+    },
+    {
       "Command": "echo",
       "Target": "Kontroluji tlačítko ROZTOČIT RONDO ZDARMA v ${lastRun}",
       "Value": "blue",
@@ -162,6 +168,12 @@
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
       "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
       "Description": ""
     },
     {
@@ -476,7 +488,6 @@
     {
       "Command": "endif"
     },
-    
     {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
