@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-12 12:59:20",
+            "Target": "Verze skriptu: 2026-04-21 12:07:47",
             "Value": "black",
             "Description": ""
         },
@@ -65,6 +65,12 @@
             "Command": "endif",
             "Target": "",
             "Value": ""
+        },
+        {
+            "Command": "pause",
+            "Target": "1000",
+            "Value": "",
+            "Description": ""
         },
         {
             "Command": "label",
