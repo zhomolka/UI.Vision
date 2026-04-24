@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-20 10:32:38",
+      "Target": "Verze skriptu: 2026-04-24 09:41:56",
       "Value": "black",
       "Description": ""
     },
@@ -20,12 +20,7 @@
       "Value": "",
       "Description": ""
     },
-    {
-      "Command": "open",
-      "Target": "${rondoUrl}",
-      "Value": "",
-      "Description": ""
-    },
+    
     {
       "Command": "store",
       "Target": "0",
@@ -77,6 +72,12 @@
     {
       "Command": "endif",
       "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${rondoUrl}",
       "Value": "",
       "Description": ""
     },
