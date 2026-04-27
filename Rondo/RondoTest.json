@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-24 09:41:56",
+      "Target": "Verze skriptu: 2026-04-27 13:51:06",
       "Value": "black",
       "Description": ""
     },
@@ -20,7 +20,6 @@
       "Value": "",
       "Description": ""
     },
-    
     {
       "Command": "store",
       "Target": "0",
@@ -95,7 +94,7 @@
     },
     {
       "Command": "store",
-      "Target": "medium",
+      "Target": "slow",
       "Value": "!replayspeed",
       "Description": ""
     },
@@ -127,6 +126,12 @@
       "Command": "click",
       "Target": "xpath=//button[@id='spin-game-button']",
       "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
       "Description": ""
     },
     {
@@ -169,12 +174,6 @@
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
       "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "fast",
-      "Value": "!replayspeed",
       "Description": ""
     },
     {
@@ -340,40 +339,17 @@
       "Description": ""
     },
     {
-      "Command": "storeEval",
-      "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "==========   TEST NA KONEC (Koupit za)  =============== v ${lastRun}",
-      "Value": "blue",
-      "Description": ""
-    },
-    {
       "Command": "verifyElementPresent",
-      "Target": "xpath=//button[contains(., 'Koupit za')]",
-      "Value": "3",
-      "Description": ""
+      "Target": "xpath=//h1[contains(., 'Dnes už')]"
     },
     {
       "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "storeEval",
-      "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
+      "Target": "${!LastCommandOK} == true"
     },
     {
       "Command": "echo",
-      "Target": "Zatočení vyčerpána – konec hry v ${lastRun}",
-      "Value": "red",
-      "Description": ""
+      "Target": "🟥 Zatočení vyčerpána",
+      "Value": "red"
     },
     {
       "Command": "gotoLabel",
@@ -382,10 +358,7 @@
       "Description": ""
     },
     {
-      "Command": "endif",
-      "Target": "",
-      "Value": "",
-      "Description": ""
+      "Command": "endif"
     },
     {
       "Command": "label",
@@ -412,10 +385,14 @@
       "Description": ""
     },
     {
-      "Command": "store",
-      "Target": "1.5",
-      "Value": "!timeout_wait",
-      "Description": ""
+      "Command": "sourceExtract",
+      "Target": "page",
+      "Value": "domDump"
+    },
+    {
+      "Command": "echo",
+      "Target": "${domDump}",
+      "Value": "blue"
     },
     {
       "Command": "verifyElementPresent",
@@ -460,9 +437,21 @@
       "Description": ""
     },
     {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
+      "Description": ""
+    },
+    {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
       "Value": "lastRun",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "slow",
+      "Value": "!replayspeed",
       "Description": ""
     },
     {
@@ -667,6 +656,12 @@
       "Command": "label",
       "Target": "beforePokracovat",
       "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
       "Description": ""
     },
     {
