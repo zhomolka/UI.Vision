@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-10 11:19:23",
+            "Target": "Verze skriptu: 2026-04-28 13:11:39",
             "Value": "black",
             "Description": ""
         },
@@ -126,6 +126,12 @@
             "Value": "",
             "Description": ""
         },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[@aria-label='Skrytá karta']",
+            "Value": ""
+        },
+
         {
             "Command": "echo",
             "Target": "Kliknuto na skrytou kartu.",
