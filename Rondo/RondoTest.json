@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-27 13:51:06",
+      "Target": "Verze skriptu: 2026-04-29 15:34:54",
       "Value": "black",
       "Description": ""
     },
@@ -224,6 +224,41 @@
       "Value": "green",
       "Description": ""
     },
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "!errorIgnore"
+},
+{
+  "Command": "store",
+  "Target": "1",
+  "Value": "!timeout_wait"
+},
+{
+  "Command": "label",
+  "Target": "waitForRoztocit"
+},
+{
+  "Command": "verifyElementPresent",
+  "Target": "xpath=//*[contains(translate(., 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ROZTOČIT RONDO ZDARMA')]"
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == false"
+},
+{
+  "Command": "pause",
+  "Target": "300"
+},
+{
+  "Command": "gotoLabel",
+  "Target": "waitForRoztocit"
+},
+{
+  "Command": "endif"
+},
+
+
     {
       "Command": "gotoLabel",
       "Target": "afterZastavit",

@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-28 13:11:39",
+            "Target": "Verze skriptu: 2026-04-29 10:21:52",
             "Value": "black",
             "Description": ""
         },
@@ -59,6 +59,36 @@
         {
             "Command": "gotoLabel",
             "Target": "end",
+            "Value": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "storeText",
+            "Target": "xpath=//h2[contains(text(),'Tentokrát nic')]",
+            "Value": "checkNothing"
+        },
+        {
+            "Command": "echo",
+            "Target": "Text nalezen: ${checkNothing}",
+            "Value": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${checkNothing} == Tentokrát nic",
+            "Value": ""
+        },
+        {
+            "Command": "click",
+            "Target": "xpath=//button[contains(text(),'Nový los')]",
+            "Value": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Kliknuto na Nový los",
             "Value": ""
         },
         {
@@ -131,7 +161,6 @@
             "Target": "xpath=//button[@aria-label='Skrytá karta']",
             "Value": ""
         },
-
         {
             "Command": "echo",
             "Target": "Kliknuto na skrytou kartu.",
