@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-21 12:07:47",
+            "Target": "Verze skriptu: 2026-04-30 11:15:40",
             "Value": "black",
             "Description": ""
         },
@@ -120,60 +120,80 @@
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "gotoLabel",
-            "Target": "end",
-            "Value": "",
-            "Description": "Provizorní odskok natvrdo"
-        },
-        {
-            "Command": "store",
-            "Target": "0",
-            "Value": "i",
-            "Description": ""
-        },
-        {
-            "Command": "label",
-            "Target": "loop",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "click",
-            "Target": "xpath=//button[.//span[text()='?']]",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "echo",
-            "Target": "Kliknuto na skrytou kartu.",
-            "Value": "green",
-            "Description": ""
-        },
-        {
-            "Command": "executeScript_Sandbox",
-            "Target": "return (parseInt(${i}) || 0) + 1;",
-            "Value": "i",
-            "Description": ""
-        },
-        {
-            "Command": "if_v2",
-            "Target": "${i} < 1",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "gotoLabel",
-            "Target": "loop",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "endif",
-            "Target": "",
-            "Value": "",
-            "Description": ""
-        },
+       {
+      "Command": "store",
+      "Target": "320",
+      "Value": "y",
+      "Description": ""
+    },
+    {
+      "Command": "times",
+      "Target": "3",
+      "Value": "k",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "705",
+      "Value": "x",
+      "Description": ""
+    },
+    {
+      "Command": "times",
+      "Target": "3",
+      "Value": "j",
+      "Description": ""
+    },
+    {
+      "Command": "times",
+      "Target": "7",
+      "Value": "i",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "${x},${y}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${x}) + 18;",
+      "Value": "x",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${x}) + 30;",
+      "Value": "x",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${y}) + 140;",
+      "Value": "y",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+
+
         {
             "Command": "click",
             "Target": "xpath=//button[contains(text(),'Nový los')]",
