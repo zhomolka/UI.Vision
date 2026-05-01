@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-30 11:15:40",
+            "Target": "Verze skriptu: 2026-05-01 11:47:56",
             "Value": "black",
             "Description": ""
         },
@@ -114,12 +114,7 @@
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "run",
-            "Target": "Wait",
-            "Value": "",
-            "Description": ""
-        },
+        
        {
       "Command": "store",
       "Target": "320",

@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-30 14:53:09",
+      "Target": "Verze skriptu: 2026-05-01 11:40:35",
       "Value": "black",
       "Description": ""
     },
@@ -487,12 +487,7 @@
       "Value": "lastRun",
       "Description": ""
     },
-    {
-      "Command": "store",
-      "Target": "slow",
-      "Value": "!replayspeed",
-      "Description": ""
-    },
+    
     {
       "Command": "echo",
       "Target": " Hledám text 'vstup zdarma' v ${lastRun}",
