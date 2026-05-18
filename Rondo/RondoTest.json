@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-05-01 11:40:35",
+      "Target": "Verze skriptu: 2026-05-18 10:39:50",
       "Value": "black",
       "Description": ""
     },
@@ -536,12 +536,7 @@
       "Value": "",
       "Description": ""
     },
-    {
-      "Command": "XRun",
-      "Target": "powershell",
-      "Value": "-c [console]::beep(1000,300)",
-      "Description": "Hlasitější beep"
-    },
+    
     {
       "Command": "click",
       "Target": "xpath=//*[self::button or self::a or @role='button'][translate(normalize-space(string(.)),'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů','ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ')='POKRAČOVAT']",

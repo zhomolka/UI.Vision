@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-02-23 11:21:11",
+      "Target": "Verze skriptu: 2026-05-18 10:46:521",
       "Value": "black",
       "Description": ""
     },
@@ -12,6 +12,12 @@
       "Command": "open",
       "Target": "https://www.rondo.cz/hra/rondonova-hra",
       "Value": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": "Provizorium"
     },
     {
       "Command": "store",
@@ -113,12 +119,7 @@
       "Target": "0.1",
       "Value": "!timeout_wait"
     },
-    {
-      "Command": "XClick",
-      "Target": "480,550",
-      "Value": "",
-      "Description": "Odměna za reklamu"
-    },
+    
     {
       "Command": "XClick",
       "Target": "480,620",
