@@ -4,7 +4,7 @@
   "Commands": [
    {
       "Command": "pause",
-      "Target": "5000",
+      "Target": "8000",
       "Value": "",
       "Description": ""
     }, 

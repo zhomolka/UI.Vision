@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-05-18 10:39:50",
+      "Target": "Verze skriptu: 2026-06-02 9:45:50",
       "Value": "black",
       "Description": ""
     },
@@ -551,7 +551,7 @@
     },
     {
       "Command": "storeText",
-      "Target": "xpath=//*[contains(text(),'správné číslo')]",
+      "Target": "xpath=//*[contains(text(),'najdete správné')]",
       "Value": "foundText",
       "Description": ""
     },

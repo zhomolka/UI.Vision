@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-05-13 09:43:56",
+            "Target": "Verze skriptu: 2026-06-02 10:42:36",
             "Value": "black",
             "Description": ""
         },
@@ -165,7 +165,7 @@
     },
     {
       "Command": "executeScript_Sandbox",
-      "Target": "return Number(${x}) + 30;",
+      "Target": "return Number(${x}) + 28;",
       "Value": "x",
       "Description": ""
     },
