@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-02 9:45:50",
+      "Target": "Verze skriptu: 2026-06-03 12:10:59",
       "Value": "black",
       "Description": ""
     },
@@ -38,6 +38,13 @@
       "Value": "timeoutWait",
       "Description": ""
     },
+       {
+      "Command": "open",
+      "Target": "${rondoUrl}",
+      "Value": "",
+      "Description": ""
+    },
+
     {
       "Command": "label",
       "Target": "start",
@@ -74,13 +81,7 @@
       "Value": "",
       "Description": ""
     },
-    {
-      "Command": "open",
-      "Target": "${rondoUrl}",
-      "Value": "",
-      "Description": ""
-    },
-    {
+     {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
       "Value": "lastRun",
@@ -183,36 +184,56 @@
       "Value": "blue",
       "Description": ""
     },
-    {
-      "Command": "store",
-      "Target": "true",
-      "Value": "!errorIgnore",
-      "Description": ""
-    },
-    {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "false",
-      "Value": "!errorIgnore",
-      "Description": ""
-    },
-    {
-      "Command": "click",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
-      "Value": "",
-      "Description": ""
-    },
+
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "!errorIgnore"
+},
+{
+  "Command": "verifyElementPresent",
+  "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+  "Value": ""
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == true",
+  "Value": ""
+},
+{
+  "Command": "store",
+  "Target": "false",
+  "Value": "!errorIgnore"
+},
+{
+  "Command": "waitForVisible",
+  "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+  "Value": "5000"
+},
+{
+  "Command": "pause",
+  "Target": "500",
+  "Value": ""
+},
+{
+  "Command": "executeScript_Sandbox",
+  "Target": "return true;",
+  "Value": "domReady"
+},
+{
+  "Command": "pause",
+  "Target": "300",
+  "Value": ""
+},
+{
+  "Command": "click",
+  "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+  "Value": ""
+},
+
+
+
+
     {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
