@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-03 12:10:59",
+      "Target": "Verze skriptu: 2026-06-05 10:39:57",
       "Value": "black",
       "Description": ""
     },
@@ -205,47 +205,38 @@
   "Target": "false",
   "Value": "!errorIgnore"
 },
-{
-  "Command": "waitForVisible",
-  "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
-  "Value": "5000"
-},
-{
-  "Command": "pause",
-  "Target": "500",
-  "Value": ""
-},
-{
-  "Command": "executeScript_Sandbox",
-  "Target": "return true;",
-  "Value": "domReady"
-},
-{
-  "Command": "pause",
-  "Target": "300",
-  "Value": ""
-},
-{
-  "Command": "click",
-  "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
-  "Value": ""
-},
 
-
-
-
+{
+      "Command": "waitForVisible",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+      "Value": "5000"
+    },
+    {
+      "Command": "pause",
+      "Target": "800",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": ""
+    },
     {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
+      "Value": "lastRun"
     },
     {
       "Command": "echo",
       "Target": "🟢 Kliknuto na ZASTAVIT v ${lastRun}",
-      "Value": "green",
-      "Description": ""
+      "Value": "green"
     },
+
 {
   "Command": "store",
   "Target": "true",
@@ -1434,6 +1425,13 @@
       "Value": "",
       "Description": ""
     },
+           {
+            "Command": "run",
+            "Target": "Test_Reward",
+            "Value": "",
+            "Description": ""
+        },
+
     {
       "Command": "open",
       "Target": "${rondoUrl}",
