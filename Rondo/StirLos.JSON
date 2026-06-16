@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-02 10:42:36",
+            "Target": "Verze skriptu: 2026-06-16 15:18:23",
             "Value": "black",
             "Description": ""
         },
@@ -176,12 +176,28 @@
       "Description": ""
     },
     {
-      "Command": "executeScript_Sandbox",
-      "Target": "return Number(${y}) + 140;",
-      "Value": "y",
-      "Description": ""
+        "Command": "if",
+        "Target": "${k} == 2"
     },
     {
+        "Command": "store",
+        "Target": "472",
+        "Value": "y",
+        "Description": ""
+    },
+    {
+        "Command": "else"
+    },
+    {
+        "Command": "executeScript_Sandbox",
+        "Target": "return Number(${y}) + 140;",
+        "Value": "y",
+        "Description": ""
+    },
+    {
+        "Command": "endif"
+    },
+     {
       "Command": "end",
       "Target": "",
       "Value": "",
