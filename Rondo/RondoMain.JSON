@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-20 10:22:51",
+            "Target": "Verze skriptu: 2026-06-16 17:46:14",
             "Value": "black",
             "Description": ""
         },
@@ -80,6 +80,12 @@
         {
             "Command": "run",
             "Target": "Test_Reward",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Slot",
             "Value": "",
             "Description": ""
         },

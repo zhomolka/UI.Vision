@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-09 11:40:27",
+      "Target": "Verze skriptu: 2026-06-17 14:25:09",
       "Value": "black",
       "Description": ""
     },
@@ -102,7 +102,7 @@
     },
     {
       "Command": "store",
-      "Target": "false",
+      "Target": "true",
       "Value": "!errorIgnore",
       "Description": ""
     },
@@ -202,7 +202,7 @@
 },
 {
   "Command": "store",
-  "Target": "false",
+  "Target": "true",
   "Value": "!errorIgnore"
 },
 
@@ -301,7 +301,7 @@
     },
     {
       "Command": "store",
-      "Target": "false",
+      "Target": "true",
       "Value": "!errorIgnore",
       "Description": ""
     },

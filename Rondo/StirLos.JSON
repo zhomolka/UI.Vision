@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-16 15:18:23",
+            "Target": "Verze skriptu: 2026-06-17 14:27:58",
             "Value": "black",
             "Description": ""
         },
@@ -161,7 +161,7 @@
       "Command": "end",
       "Target": "",
       "Value": "",
-      "Description": ""
+      "Description": "i"
     },
     {
       "Command": "executeScript_Sandbox",
@@ -172,6 +172,12 @@
     {
       "Command": "end",
       "Target": "",
+      "Value": "",
+      "Description": "j"
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
       "Value": "",
       "Description": ""
     },
@@ -197,11 +203,12 @@
     {
         "Command": "endif"
     },
+    
      {
       "Command": "end",
       "Target": "",
       "Value": "",
-      "Description": ""
+      "Description": "k"
     },
 
 

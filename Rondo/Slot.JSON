@@ -1,0 +1,71 @@
+{
+  "Name": "Slot",
+  "CreationDate": "2026-6-16",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-06-16 17:28:15",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/hra/slot",
+      "Value": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[@id='vipSuperSpinButton']",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[@id='vipSuperSpinButton' and contains(., 'ZASTAVIT')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "6000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//span[@class='vip-super-spin__stat-value']",
+      "Value": "spinValue"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${spinValue} > 0",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hodnota je větší než nula: ${spinValue}",
+      "Value": "green"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}
