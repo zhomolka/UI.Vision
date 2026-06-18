@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-13 15:30:15",
+            "Target": "Verze skriptu: 2026-06-18 14:49:51",
             "Value": "black",
             "Description": ""
         },
@@ -32,22 +32,16 @@
             "Description": ""
         },
         {
-            "Command": "storeText",
-            "Target": "xpath=//*[contains(text(),'Bohužel prohráváte')]",
-            "Value": "foundText",
-            "Description": ""
+            "Command": "verifyElementPresent",
+            "Target": "xpath=//*[contains(text(),'Bohužel prohráváte')]"
         },
         {
             "Command": "if_v2",
-            "Target": "${!LastCommandOK} == true",
-            "Value": "",
-            "Description": ""
+            "Target": "${!LastCommandOK} == true"
         },
         {
             "Command": "run",
-            "Target": "Pokracovat",
-            "Value": "",
-            "Description": ""
+            "Target": "Pokracovat"
         },
         {
             "Command": "else",

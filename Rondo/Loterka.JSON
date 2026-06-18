@@ -1,52 +1,99 @@
 {
-  "Name": "Test_Reward",
-  "CreationDate": "2026-2-19",
+  "Name": "Loterka",
+  "CreationDate": "2026-6-16",
   "Commands": [
-   {
-      "Command": "pause",
-      "Target": "8000",
-      "Value": "",
-      "Description": ""
-    }, 
     {
-      "Command": "verifyElementPresent",
-      "Target": "id=btn-reward",
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-06-17 16:21:45",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/hra/loterka",
+      "Value": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
       "Value": "",
       "Description": ""
     },
     {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[@id='loterka-random' and not(@disabled)]"
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "randomEnabled"
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore"
+    },
+    {
       "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
+      "Target": "${randomEnabled} == true"
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Náhodný výběr je ENABLED",
+      "Value": "green"
+    },
+    {
+      "Command": "else"
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Náhodný výběr je DISABLED",
+      "Value": "red"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(text(),'Náhodný výběr')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "click",
-      "Target": "id=btn-reward",
+      "Target": "xpath=//button[.//span[contains(text(),'Vsadit a hrát')]]",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'rondo-loterka__modal-close')]",
+      "Value": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "start",
       "Value": "",
       "Description": ""
     },
     {
-      "Command": "pause",
-      "Target": "30000",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "XClick",
-      "Target": "1500,50",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 Kliknuto na zavření reklamy",
-      "Value": "blue",
-      "Description": ""
-    },
-    {
-      "Command": "endif",
-      "Target": "",
+      "Command": "label",
+      "Target": "end",
       "Value": "",
       "Description": ""
     }

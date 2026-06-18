@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-17 14:27:58",
+            "Target": "Verze skriptu: 2026-06-18 15:26:59",
             "Value": "black",
             "Description": ""
         },
@@ -176,18 +176,18 @@
       "Description": "j"
     },
     {
-      "Command": "pause",
-      "Target": "1000",
-      "Value": "",
-      "Description": ""
+        "Command": "pause",
+        "Target": "1000",
+        "Value": "",
+        "Description": ""
     },
     {
-        "Command": "if",
-        "Target": "${k} == 2"
+        "Command": "if_v2",
+        "Target": "${y} > 400"
     },
     {
         "Command": "store",
-        "Target": "472",
+        "Target": "540",
         "Value": "y",
         "Description": ""
     },
