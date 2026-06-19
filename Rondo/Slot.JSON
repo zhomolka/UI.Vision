@@ -4,8 +4,14 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-16 17:28:15",
+      "Target": "Verze skriptu: 2026-06-19 15:29:36",
       "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "start",
+      "Value": "",
       "Description": ""
     },
     {
@@ -14,10 +20,30 @@
       "Value": ""
     },
     {
-      "Command": "label",
-      "Target": "start",
+      "Command": "storeText",
+      "Target": "xpath=//span[@class='vip-super-spin__stat-value']",
+      "Value": "spinValue"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${spinValue} == 0",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hodnota zatočení je nula. Končím",
+      "Value": "green"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
       "Value": "",
       "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
     },
     {
       "Command": "click",
@@ -37,35 +63,83 @@
     },
     {
       "Command": "pause",
-      "Target": "6000",
+      "Target": "8000",
       "Value": "",
       "Description": ""
     },
     {
-      "Command": "storeText",
-      "Target": "xpath=//span[@class='vip-super-spin__stat-value']",
-      "Value": "spinValue"
+      "Command": "storeEval",
+      "Target": "document.evaluate(\"//div[@id='vipSuperSpinRewardName' and contains(., '500 Kč od Ronda')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.offsetParent !== null",
+      "Value": "rewardVisible"
     },
     {
       "Command": "if_v2",
-      "Target": "${spinValue} > 0",
-      "Value": ""
+      "Target": "${rewardVisible} == true"
     },
     {
       "Command": "echo",
-      "Target": "Hodnota je větší než nula: ${spinValue}",
-      "Value": "green"
+      "Target": "🟢 Text 500 Kč od Ronda je viditelný}",
+      "Value": "green",
+      "Description": ""
     },
     {
       "Command": "gotoLabel",
-      "Target": "start",
+      "Target": "start"
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.querySelector('#vipSuperSpinClaim').offsetParent !== null",
+      "Value": "claimReady"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${claimReady} == true"
+    },
+    {
+      "Command": "echo",
+      "Target": "Vyzvednout dílky je kliknutelné"
+    },
+    {
+      "Command": "click",
+      "Target": "id=vipSuperSpinClaim"
+    },
+    {
+      "Command": "pause",
+      "Target": "8000",
       "Value": "",
       "Description": ""
     },
     {
-      "Command": "endif",
-      "Target": "",
-      "Value": ""
+      "Command": "click",
+      "Target": "xpath=//button[contains(., 'Vyzvednout Rondo dílky')]"
+    },
+    {
+      "Command": "run",
+      "Target": "Pokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "Pokracovat",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(., 'Chci hrát o') and contains(., 'další dílky')]"
+    },
+    {
+      "Command": "endif"
+    },
+    {
+      "Command": "label",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
     }
   ]
 }
