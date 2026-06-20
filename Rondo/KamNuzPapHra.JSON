@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-18 17:59:10",
+      "Target": "Verze skriptu: 2026-06-20 12:30:04",
       "Value": "black",
       "Description": ""
     },
@@ -107,6 +107,26 @@
 {
   "Command": "endif"
 },
+{
+  "Command": "storeEval",
+  "Target": "document.evaluate(\"//button[@id='knp-play']//small[contains(normalize-space(.), 'Další zápas stojí 2000 R')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue !== null",
+  "Value": "costVisible"
+},
+
+
+{
+  "Command": "if_v2",
+  "Target": "${costVisible} == true"
+},
+{
+  "Command": "gotoLabel",
+  "Target": "end"
+},
+
+{
+  "Command": "endif"
+},
+
 
 {
   "Command": "click",

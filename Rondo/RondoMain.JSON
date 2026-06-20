@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-17 16:24:41",
+            "Target": "Verze skriptu: 2026-06-20 12:47:18",
             "Value": "black",
             "Description": ""
         },
@@ -101,6 +101,13 @@
             "Value": "",
             "Description": ""
         },
+        {
+            "Command": "run",
+            "Target": "KamNuzPapHra",
+            "Value": "",
+            "Description": ""
+        },
+        
         {
             "Command": "run",
             "Target": "RondoHra",
