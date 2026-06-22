@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-20 12:30:04",
+      "Target": "Verze skriptu: 2026-06-22 12:49:24",
       "Value": "black",
       "Description": ""
     },
@@ -106,6 +106,10 @@
 },
 {
   "Command": "endif"
+},
+{
+  "Command": "pause",
+  "Target": "2000"
 },
 {
   "Command": "storeEval",

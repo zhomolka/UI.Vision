@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-17 16:21:45",
+      "Target": "Verze skriptu: 2026-06-22 13:42:10",
       "Value": "black",
       "Description": ""
     },
@@ -20,65 +20,70 @@
       "Description": ""
     },
     {
+      "Command": "verifyElementPresent",
+      "Target": "css=#loterka-random",
+      "Value": ""
+    },
+    {
       "Command": "store",
       "Target": "true",
       "Value": "!errorIgnore"
     },
     {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//button[@id='loterka-random' and not(@disabled)]"
-    },
-    {
-      "Command": "store",
-      "Target": "${!LastCommandOK}",
-      "Value": "randomEnabled"
-    },
-    {
-      "Command": "store",
-      "Target": "false",
-      "Value": "!errorIgnore"
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${randomEnabled} == true"
-    },
-    {
-      "Command": "echo",
-      "Target": "Tlačítko Náhodný výběr je ENABLED",
-      "Value": "green"
-    },
-    {
-      "Command": "else"
-    },
-    {
-      "Command": "echo",
-      "Target": "Tlačítko Náhodný výběr je DISABLED",
-      "Value": "red"
-    },
-    {
-      "Command": "gotoLabel",
-      "Target": "end",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "endif"
-    },
-    {
       "Command": "click",
-      "Target": "xpath=//button[contains(text(),'Náhodný výběr')]",
+      "Target": "css=#loterka-random",
       "Value": ""
     },
     {
-      "Command": "pause",
-      "Target": "1000",
-      "Value": "",
-      "Description": ""
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
     },
     {
       "Command": "click",
       "Target": "xpath=//button[.//span[contains(text(),'Vsadit a hrát')]]",
       "Value": ""
+    },
+    
+  
+  {
+    "Command": "verifyElementPresent",
+    "Target": "xpath=//b[@id='loterka-price-copy' and contains(.,'Limit vyčerpán')]",
+    "Value": ""
+  },
+  {
+    "Command": "store",
+    "Target": "${!LastCommandOK}",
+    "Value": "limitVycerpan"
+  },
+  {
+    "Command": "if_v2",
+    "Target": "${limitVycerpan}",
+    "Value": ""
+  },
+  {
+    "Command": "echo",
+    "Target": "Limit vyčerpán – skáču na END",
+    "Value": "red"
+  },
+  {
+    "Command": "gotoLabel",
+    "Target": "end",
+    "Value": ""
+  },
+  {
+    "Command": "endif",
+    "Target": "",
+    "Value": ""
+  },
+
+
+
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "click",
