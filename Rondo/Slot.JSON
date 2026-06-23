@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-19 15:29:36",
+      "Target": "Verze skriptu: 2026-06-23 13:42:08",
       "Value": "black",
       "Description": ""
     },
@@ -67,41 +67,30 @@
       "Value": "",
       "Description": ""
     },
-    {
-      "Command": "storeEval",
-      "Target": "document.evaluate(\"//div[@id='vipSuperSpinRewardName' and contains(., '500 Kč od Ronda')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.offsetParent !== null",
-      "Value": "rewardVisible"
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${rewardVisible} == true"
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 Text 500 Kč od Ronda je viditelný}",
-      "Value": "green",
-      "Description": ""
-    },
-    {
-      "Command": "gotoLabel",
-      "Target": "start"
-    },
-    {
-      "Command": "endif"
-    },
-    {
-      "Command": "storeEval",
-      "Target": "document.querySelector('#vipSuperSpinClaim').offsetParent !== null",
-      "Value": "claimReady"
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${claimReady} == true"
-    },
-    {
-      "Command": "echo",
-      "Target": "Vyzvednout dílky je kliknutelné"
-    },
+    
+   
+  {
+    "Command": "storeEval",
+    "Target": "var el = document.querySelector('#vipSuperSpinClaim'); if (!el) { false; } else { var t = el.textContent.trim(); (t === 'Vyzvednout dílky') && (el.offsetParent !== null); }",
+    "Value": "claimVisible"
+  },
+  {
+    "Command": "echo",
+    "Target": "Viditelnost: ${claimVisible}",
+    "Value": ""
+  },
+  {
+    "Command": "if_v2",
+    "Target": "${claimVisible} == true",
+    "Value": ""
+  },
+  {
+    "Command": "echo",
+    "Target": "🟢 Tlačítko Vyzvednout dílky je viditelné",
+    "Value": "green"
+  },
+  
+
     {
       "Command": "click",
       "Target": "id=vipSuperSpinClaim"
@@ -134,6 +123,11 @@
     },
     {
       "Command": "endif"
+    },
+    
+    {
+      "Command": "gotoLabel",
+      "Target": "start"
     },
     {
       "Command": "label",
