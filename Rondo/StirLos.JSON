@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-18 15:26:59",
+            "Target": "Verze skriptu: 2026-06-24 14:05:24",
             "Value": "black",
             "Description": ""
         },
@@ -114,104 +114,131 @@
             "Value": "",
             "Description": ""
         },
+        {
+            "Command": "store",
+            "Target": "320",
+            "Value": "y",
+            "Description": ""
+        },
+        {
+            "Command": "times",
+            "Target": "3",
+            "Value": "k",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "710",
+            "Value": "x",
+            "Description": ""
+        },
+        {
+            "Command": "times",
+            "Target": "3",
+            "Value": "j",
+            "Description": ""
+        },
+        {
+            "Command": "times",
+            "Target": "7",
+            "Value": "i",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "${x},${y}",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "${!URL}",
+            "Value": "currentUrl"
+        },
         
-       {
-      "Command": "store",
-      "Target": "320",
-      "Value": "y",
-      "Description": ""
-    },
-    {
-      "Command": "times",
-      "Target": "3",
-      "Value": "k",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "710",
-      "Value": "x",
-      "Description": ""
-    },
-    {
-      "Command": "times",
-      "Target": "3",
-      "Value": "j",
-      "Description": ""
-    },
-    {
-      "Command": "times",
-      "Target": "7",
-      "Value": "i",
-      "Description": ""
-    },
-    {
-      "Command": "XClick",
-      "Target": "${x},${y}",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "executeScript_Sandbox",
-      "Target": "return Number(${x}) + 18;",
-      "Value": "x",
-      "Description": ""
-    },
-    {
-      "Command": "end",
-      "Target": "",
-      "Value": "",
-      "Description": "i"
-    },
-    {
-      "Command": "executeScript_Sandbox",
-      "Target": "return Number(${x}) + 28;",
-      "Value": "x",
-      "Description": ""
-    },
-    {
-      "Command": "end",
-      "Target": "",
-      "Value": "",
-      "Description": "j"
-    },
-    {
-        "Command": "pause",
-        "Target": "1000",
-        "Value": "",
-        "Description": ""
-    },
-    {
-        "Command": "if_v2",
-        "Target": "${y} > 400"
-    },
-    {
-        "Command": "store",
-        "Target": "540",
-        "Value": "y",
-        "Description": ""
-    },
-    {
-        "Command": "else"
-    },
-    {
-        "Command": "executeScript_Sandbox",
-        "Target": "return Number(${y}) + 140;",
-        "Value": "y",
-        "Description": ""
-    },
-    {
-        "Command": "endif"
-    },
-    
-     {
-      "Command": "end",
-      "Target": "",
-      "Value": "",
-      "Description": "k"
-    },
-
-
+        {
+            "Command": "if_v2",
+            "Target": "${currentUrl}.startsWith(\"https://www.rondo.cz/\") == false",
+            "Value": ""
+        },
+        {
+            "Command": "echo",
+            "Target": "Opuštěna stránka Rondo.cz → návrat zpět",
+            "Value": "red"
+        },
+        {
+            "Command": "back",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "pause",
+            "Target": "1000",
+            "Value": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
+            "Value": ""
+        },
+        {
+            "Command": "executeScript_Sandbox",
+            "Target": "return Number(${x}) + 18;",
+            "Value": "x",
+            "Description": ""
+        },
+        {
+            "Command": "end",
+            "Target": "",
+            "Value": "",
+            "Description": "i"
+        },
+        {
+            "Command": "executeScript_Sandbox",
+            "Target": "return Number(${x}) + 28;",
+            "Value": "x",
+            "Description": ""
+        },
+        {
+            "Command": "end",
+            "Target": "",
+            "Value": "",
+            "Description": "j"
+        },
+        {
+            "Command": "pause",
+            "Target": "1000",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "if_v2",
+            "Target": "${y} > 400"
+        },
+        {
+            "Command": "store",
+            "Target": "540",
+            "Value": "y",
+            "Description": ""
+        },
+        {
+            "Command": "else"
+        },
+        {
+            "Command": "executeScript_Sandbox",
+            "Target": "return Number(${y}) + 140;",
+            "Value": "y",
+            "Description": ""
+        },
+        {
+            "Command": "endif"
+        },
+        {
+            "Command": "end",
+            "Target": "",
+            "Value": "",
+            "Description": "k"
+        },
         {
             "Command": "click",
             "Target": "xpath=//button[contains(text(),'Nový los')]",

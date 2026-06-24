@@ -4,20 +4,20 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-22 13:42:10",
+      "Target": "Verze skriptu: 2026-06-24 14:21:06",
       "Value": "black",
       "Description": ""
-    },
-    {
-      "Command": "open",
-      "Target": "https://www.rondo.cz/hra/loterka",
-      "Value": ""
     },
     {
       "Command": "label",
       "Target": "start",
       "Value": "",
       "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/hra/loterka",
+      "Value": ""
     },
     {
       "Command": "verifyElementPresent",
@@ -44,41 +44,36 @@
       "Target": "xpath=//button[.//span[contains(text(),'Vsadit a hrát')]]",
       "Value": ""
     },
-    
-  
-  {
-    "Command": "verifyElementPresent",
-    "Target": "xpath=//b[@id='loterka-price-copy' and contains(.,'Limit vyčerpán')]",
-    "Value": ""
-  },
-  {
-    "Command": "store",
-    "Target": "${!LastCommandOK}",
-    "Value": "limitVycerpan"
-  },
-  {
-    "Command": "if_v2",
-    "Target": "${limitVycerpan}",
-    "Value": ""
-  },
-  {
-    "Command": "echo",
-    "Target": "Limit vyčerpán – skáču na END",
-    "Value": "red"
-  },
-  {
-    "Command": "gotoLabel",
-    "Target": "end",
-    "Value": ""
-  },
-  {
-    "Command": "endif",
-    "Target": "",
-    "Value": ""
-  },
-
-
-
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//b[@id='loterka-price-copy' and contains(.,'Limit vyčerpán')]",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "limitVycerpan"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${limitVycerpan}",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Limit vyčerpán – skáču na END",
+      "Value": "red"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
     {
       "Command": "pause",
       "Target": "1000",
@@ -89,6 +84,12 @@
       "Command": "click",
       "Target": "xpath=//button[contains(@class,'rondo-loterka__modal-close')]",
       "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "1500,50",
+      "Value": "",
+      "Description": "Zavři informační okno"
     },
     {
       "Command": "gotoLabel",
