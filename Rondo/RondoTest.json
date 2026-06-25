@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-17 14:25:09",
+      "Target": "Verze skriptu: 2026-06-25 15:31:59",
       "Value": "black",
       "Description": ""
     },
@@ -28,7 +28,7 @@
     },
     {
       "Command": "store",
-      "Target": "50",
+      "Target": "65",
       "Value": "maxSpins",
       "Description": ""
     },

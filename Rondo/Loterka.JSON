@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-24 14:21:06",
+      "Target": "Verze skriptu: 2026-06-25 15:28:39",
       "Value": "black",
       "Description": ""
     },
@@ -44,36 +44,40 @@
       "Target": "xpath=//button[.//span[contains(text(),'Vsadit a hrát')]]",
       "Value": ""
     },
-    {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//b[@id='loterka-price-copy' and contains(.,'Limit vyčerpán')]",
-      "Value": ""
-    },
-    {
-      "Command": "store",
-      "Target": "${!LastCommandOK}",
-      "Value": "limitVycerpan"
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${limitVycerpan}",
-      "Value": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "Limit vyčerpán – skáču na END",
-      "Value": "red"
-    },
-    {
-      "Command": "gotoLabel",
-      "Target": "end",
-      "Value": ""
-    },
-    {
-      "Command": "endif",
-      "Target": "",
-      "Value": ""
-    },
+
+
+  {
+    "Command": "visualAssert",
+    "Target": "ocr=Limit vyčerpán",
+    "Value": ""
+  },
+  {
+    "Command": "store",
+    "Target": "${!LastCommandOK}",
+    "Value": "limitVycerpan"
+  },
+  {
+    "Command": "if_v2",
+    "Target": "${limitVycerpan} == true",
+    "Value": ""
+  },
+  {
+    "Command": "echo",
+    "Target": "Limit vyčerpán – skáču na END",
+    "Value": "red"
+  },
+  {
+    "Command": "gotoLabel",
+    "Target": "end",
+    "Value": ""
+  },
+  {
+    "Command": "endif"
+  },
+
+
+
+
     {
       "Command": "pause",
       "Target": "1000",
