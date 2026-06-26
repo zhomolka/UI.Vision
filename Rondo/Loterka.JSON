@@ -1,10 +1,10 @@
 {
   "Name": "Loterka",
-  "CreationDate": "2026-6-16",
+  "CreationDate": "2026-6-26",
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-25 15:28:39",
+      "Target": "Verze skriptu: 2026-06-26 14:31:12",
       "Value": "black",
       "Description": ""
     },
@@ -15,69 +15,83 @@
       "Description": ""
     },
     {
+      "Command": "times",
+      "Target": "3",
+      "Value": "i",
+      "Description": ""
+    },
+    {
       "Command": "open",
       "Target": "https://www.rondo.cz/hra/loterka",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "verifyElementPresent",
       "Target": "css=#loterka-random",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "true",
-      "Value": "!errorIgnore"
+      "Value": "!errorIgnore",
+      "Description": ""
     },
     {
       "Command": "click",
       "Target": "css=#loterka-random",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "true",
-      "Value": "!errorIgnore"
+      "Value": "!errorIgnore",
+      "Description": ""
     },
     {
       "Command": "click",
       "Target": "xpath=//button[.//span[contains(text(),'Vsadit a hrát')]]",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
-
-
-  {
-    "Command": "visualAssert",
-    "Target": "ocr=Limit vyčerpán",
-    "Value": ""
-  },
-  {
-    "Command": "store",
-    "Target": "${!LastCommandOK}",
-    "Value": "limitVycerpan"
-  },
-  {
-    "Command": "if_v2",
-    "Target": "${limitVycerpan} == true",
-    "Value": ""
-  },
-  {
-    "Command": "echo",
-    "Target": "Limit vyčerpán – skáču na END",
-    "Value": "red"
-  },
-  {
-    "Command": "gotoLabel",
-    "Target": "end",
-    "Value": ""
-  },
-  {
-    "Command": "endif"
-  },
-
-
-
-
+    {
+      "Command": "storeText",
+      "Target": "id=loterka-price-copy",
+      "Value": "priceText",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Cena tahu: ${priceText}",
+      "Value": "blue",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${priceText}",
+      "Value": "contains=Limit",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Limit vyčerpán – skáču na END",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
     {
       "Command": "pause",
       "Target": "1000",
@@ -87,7 +101,8 @@
     {
       "Command": "click",
       "Target": "xpath=//button[contains(@class,'rondo-loterka__modal-close')]",
-      "Value": ""
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "XClick",
@@ -96,10 +111,10 @@
       "Description": "Zavři informační okno"
     },
     {
-      "Command": "gotoLabel",
-      "Target": "start",
+      "Command": "end",
+      "Target": "",
       "Value": "",
-      "Description": ""
+      "Description": "i"
     },
     {
       "Command": "label",
