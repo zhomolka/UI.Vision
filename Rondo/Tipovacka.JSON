@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-08 10:50:20",
+            "Target": "Verze skriptu: 2026-06-26 16:20:28",
             "Value": "black",
             "Description": ""
         },
@@ -35,7 +35,7 @@
         },
         {
             "Command": "verifyElementPresent",
-            "Target": "xpath=//span[contains(@class,'badge--cta') and contains(text(),'Čeká na váš tip!')]",
+            "Target": "xpath=//span[contains(@class,'badge--cta') and contains(text(),'Čeká na váš tip')]",
             "Value": ""
         },
         {
@@ -46,7 +46,7 @@
         },
         {
             "Command": "click",
-            "Target": "xpath=//span[contains(text(),'Čeká na váš tip!')]/ancestor::*[1]",
+            "Target": "xpath=//span[contains(text(),'Čeká na váš tip')]/ancestor::*[1]",
             "Value": ""
         },
         {
@@ -56,7 +56,7 @@
         },
         {
             "Command": "echo",
-            "Target": "Prvek 'Čeká na váš tip!' nebyl nalezen.",
+            "Target": "Prvek 'Čeká na váš tip' nebyl nalezen.",
             "Value": ""
         },
         {
