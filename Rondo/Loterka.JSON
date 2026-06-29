@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-26 14:31:12",
+      "Target": "Verze skriptu: 2026-06-29 09:28:53",
       "Value": "black",
       "Description": ""
     },
@@ -71,7 +71,7 @@
     {
       "Command": "if_v2",
       "Target": "${priceText}",
-      "Value": "contains=Limit",
+      "Value": "contains=Limit vy",
       "Description": ""
     },
     {
