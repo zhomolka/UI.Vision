@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-24 14:05:24",
+            "Target": "Verze skriptu: 2026-07-21 15:13:35",
             "Value": "black",
             "Description": ""
         },
@@ -228,6 +228,18 @@
             "Command": "executeScript_Sandbox",
             "Target": "return Number(${y}) + 140;",
             "Value": "y",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "510,50",
+            "Value": "",
+            "Description": "Zavři reklamu"
+        },
+        {
+            "Command": "pause",
+            "Target": "3000",
+            "Value": "",
             "Description": ""
         },
         {
