@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-03 13:17:59",
+      "Target": "Verze skriptu: 2026-08-05 14:32:42",
       "Value": "black",
       "Description": ""
     },
@@ -563,7 +563,7 @@
     },
     {
       "Command": "storeText",
-      "Target": "xpath=//*[contains(., 'najdete')]",
+       "Target": "xpath=//*[contains(text(),'najdete')]",
       "Value": "foundText"
     },
     {
