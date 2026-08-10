@@ -1,0 +1,114 @@
+{
+  "Name": "VIP",
+  "CreationDate": "2026-4-9",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-08-10 10:07:48",
+      "Value": "black"
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/vernostni-program",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hledám tlačítko 'Otevřít truhlu'",
+      "Value": "blue"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!timeout_wait"
+    },
+
+    {
+      "Command": "storeText",
+      "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
+      "Value": "foundText"
+    },
+
+    {
+      "Command": "if_v2",
+      "Target": "${foundText}.length == 0",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko 'Otevřít truhlu' nebylo nalezeno – končím",
+      "Value": "red"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": ""
+    },
+    {
+      "Command": "endif"
+    },
+
+    {
+      "Command": "echo",
+      "Target": "Tlačítko nalezeno – pokouším se kliknout",
+      "Value": "green"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto na 'Otevřít truhlu'",
+      "Value": "blue"
+    },
+
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": ""
+    },
+
+    {
+      "Command": "storeText",
+      "Target": "xpath=//a[contains(@class,'myprofile-v3-loyalty-modal__accept')]",
+      "Value": "foundText2"
+    },
+
+    {
+      "Command": "if_v2",
+      "Target": "${foundText2}.length > 0",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//a[contains(@class,'myprofile-v3-loyalty-modal__accept')]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto na potvrzovací tlačítko",
+      "Value": "blue"
+    },
+    {
+      "Command": "endif"
+    },
+
+    {
+      "Command": "label",
+      "Target": "end",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Hotovo",
+      "Value": "green"
+    }
+  ]
+}
