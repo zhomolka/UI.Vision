@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-05 14:32:42",
+      "Target": "Verze skriptu: 2026-08-11 18:34:05",
       "Value": "black",
       "Description": ""
     },
@@ -152,6 +152,37 @@
       "Command": "echo",
       "Target": "🟢 ================  Kliknuto na ROZTOČIT RONDO ZDARMA =================== v ${lastRun}",
       "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "else"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'HRA')]",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟥 ================  Zvolená hra skončila =================== ",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
       "Description": ""
     },
     {
