@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-11 18:00:04",
+      "Target": "Verze skriptu: 2026-08-17 14:23:09",
       "Value": "black"
     },
     {
@@ -17,41 +17,35 @@
       "Target": "Hledám tlačítko 'Otevřít truhlu'",
       "Value": "blue"
     },
+  
     
-    {
+{
   "Command": "store",
   "Target": "true",
   "Value": "!errorIgnore"
 },
 {
-  "Command": "store",
-  "Target": "1",
-  "Value": "!timeout_wait"
+  "Command": "waitForElementPresent",
+  "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
+  "Value": "1000"
 },
+
 {
   "Command": "verifyElementPresent",
-  "Target": "xpath=//button[contains(@class,'js-rewards-chest-open') and not(@disabled)]"
+  "Target": "xpath=//button[contains(@class,'js-rewards-chest-open') and not(@disabled)]",
+  "Value": ""
 },
 {
-  "Command": "store",
-  "Target": "${!LastCommandOK}",
-  "Value": "canOpenChest"
-},
-{
-  "Command": "store",
-  "Target": "false",
-  "Value": "!errorIgnore"
-},
-{
-  "Command": "if_v2",
-  "Target": "${canOpenChest} == true"
-},
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true"
+    },
+
+
 {
   "Command": "echo",
   "Target": "Tlačítko Otevřít truhlu je ENABLED – klikám",
   "Value": "green"
 },
-
 {
   "Command": "else"
 },
@@ -69,24 +63,13 @@
   "Command": "endif"
 },
 
-    
-  
-    {
-      "Command": "echo",
-      "Target": "Tlačítko nalezeno – pokouším se kliknout",
-      "Value": "green"
-    },
- 
-    {
-      "Command": "click",
-      "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
+
+ {
+      "Command": "label",
+      "Target": "open",
       "Value": ""
     },
-    {
-      "Command": "echo",
-      "Target": "Kliknuto na 'Otevřít truhlu'",
-      "Value": "blue"
-    },
+
 
     {
       "Command": "pause",
@@ -118,6 +101,53 @@
     {
       "Command": "endif"
     },
+    {
+  "Command": "waitForElementPresent",
+  "Target": "xpath=//span[contains(@class,'rondo-ntf-text') and contains(text(),'Odměnu se nepodařilo připsat')]",
+  "Value": "10000"
+},
+{
+  "Command": "verifyText",
+  "Target": "xpath=//span[contains(@class,'rondo-ntf-text')]",
+  "Value": "Odměnu se nepodařilo připsat. Zkuste to prosím znovu."
+},
+{
+  "Command": "store",
+  "Target": "${!LastCommandOK}",
+  "Value": "rewardErrorShown"
+},
+{
+  "Command": "echo",
+  "Target": "rewardErrorShown = ${rewardErrorShown}",
+  "Value": "blue"
+},
+{
+  "Command": "if_v2",
+  "Target": "true == ${rewardErrorShown}",
+  "Value": ""
+},
+{
+  "Command": "echo",
+  "Target": "Chybová hláška JE zobrazená",
+  "Value": "red"
+},
+{
+      "Command": "gotoLabel",
+      "Target": "open",
+      "Value": ""
+    },
+{
+  "Command": "else"
+},
+{
+  "Command": "echo",
+  "Target": "Chybová hláška NENÍ zobrazená",
+  "Value": "green"
+},
+{
+  "Command": "endif"
+},
+
 
     {
       "Command": "label",

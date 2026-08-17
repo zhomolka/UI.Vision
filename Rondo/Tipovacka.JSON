@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-26 16:20:28",
+            "Target": "Verze skriptu: 2026-08-17 11:46:26",
             "Value": "black",
             "Description": ""
         },
@@ -127,25 +127,14 @@
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "XClick",
-            "Target": "1500,50",
-            "Value": "",
-            "Description": "Zavři reklamu"
-        },
+        
         {
             "Command": "pause",
             "Target": "5000",
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "XClick",
-            "Target": "1500,50",
-            "Value": "",
-            "Description": "Zavři reklamu"
-        },
-        {
+               {
             "Command": "pause",
             "Target": "5000",
             "Value": "",
