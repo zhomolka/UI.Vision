@@ -1,5 +1,5 @@
 {
-  "Name": "SmartSelect",
+  "Name": "SmartSelectOCR",
   "Commands": [
     {
       "Command": "store",
@@ -8,44 +8,40 @@
     },
 
     {
-      "Command": "executeScript_Sandbox",
-      "Target": "var buttons = document.querySelectorAll('button.answer'); var results = []; buttons.forEach(function(btn){ var t = btn.querySelector('.answer__text'); var l = btn.querySelector('.answer__label'); var val = ''; if(t && t.innerText.trim()!='') val = t.innerText.trim(); else if(l && l.innerText.trim()!='') val = l.innerText.trim(); else val = ''; results.push(val); }); return results;",
-      "Value": "answers"
+      "Command": "visionFind",
+      "Target": "answer_area.png",
+      "Value": "answerArea"
     },
 
     {
-      "Command": "comment",
-      "Target": "Najdeme index shody",
-      "Value": ""
+      "Command": "ocrExtractRelative",
+      "Target": "answerArea",
+      "Value": "ocrText"
     },
+
     {
       "Command": "executeScript_Sandbox",
-      "Target": "var list = JSON.parse(${myList}); var ans = ${answers}; for(var i=0;i<ans.length;i++){ if(list.includes(ans[i])) return i+1; } return -1;",
+      "Target": "var list = JSON.parse(${myList}); var txt = ${ocrText}; var lines = txt.split('\\n'); for(var i=0;i<lines.length;i++){ if(list.includes(lines[i].trim())) return i; } return -1;",
       "Value": "matchIndex"
     },
 
     {
       "Command": "if",
-      "Target": "${matchIndex} > 0",
+      "Target": "${matchIndex} >= 0",
       "Value": ""
     },
     {
-      "Command": "click",
-      "Target": "xpath=(//button[contains(@class,'answer')])[${matchIndex}]",
-      "Value": ""
+      "Command": "visionClickRelative",
+      "Target": "answerArea",
+      "Value": "${matchIndex}"
     },
     {
       "Command": "else"
     },
     {
-      "Command": "comment",
-      "Target": "Fallback – klik na první odpověď",
-      "Value": ""
-    },
-    {
-      "Command": "click",
-      "Target": "xpath=(//button[contains(@class,'answer')])[1]",
-      "Value": ""
+      "Command": "visionClickRelative",
+      "Target": "answerArea",
+      "Value": "0"
     },
     {
       "Command": "endif"

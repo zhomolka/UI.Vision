@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-06-18 14:49:51",
+            "Target": "Verze skriptu: 2026-08-18 16:09:42",
             "Value": "black",
             "Description": ""
         },
@@ -50,8 +50,14 @@
             "Description": ""
         },
         {
+            "Command": "echo",
+            "Target": "🟢 klikám na 'Zkusit znovu'",
+            "Value": "green",
+            "Description": ""
+        },
+        {
             "Command": "click",
-            "Target": "xpath=//button[contains(@class,'btn-next') and normalize-space()='Zkusit znovu']",
+            "Target": "xpath=//button[normalize-space(text())='Zkusit znovu']",
             "Value": ""
         },
         {
