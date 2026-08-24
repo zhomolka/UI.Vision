@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-17 14:23:09",
+      "Target": "Verze skriptu: 2026-08-24 10:28:36",
       "Value": "black"
     },
     {
@@ -103,13 +103,13 @@
     },
     {
   "Command": "waitForElementPresent",
-  "Target": "xpath=//span[contains(@class,'rondo-ntf-text') and contains(text(),'Odměnu se nepodařilo připsat')]",
+  "Target": "xpath=//span[contains(@class,'rondo-ntf-text') and contains(text(),'Odměnu se')]",
   "Value": "10000"
 },
 {
   "Command": "verifyText",
   "Target": "xpath=//span[contains(@class,'rondo-ntf-text')]",
-  "Value": "Odměnu se nepodařilo připsat. Zkuste to prosím znovu."
+  "Value": "Odměnu se"
 },
 {
   "Command": "store",

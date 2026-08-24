@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-08-11 18:05:50",
+            "Target": "Verze skriptu: 2026-08-24 10:38:12",
             "Value": "black",
             "Description": ""
         },
@@ -51,35 +51,8 @@
             "Description": ""
         },
         {
-            "Command": "open",
-            "Target": "https://www.rondo.cz/hra/bubble-breaker/top-list",
-            "Value": ""
-        },
-        {
             "Command": "run",
-            "Target": "Test_Reward",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "open",
-            "Target": "https://www.rondo.cz/hra/tic-tac-toe/top-list",
-            "Value": ""
-        },
-        {
-            "Command": "run",
-            "Target": "Test_Reward",
-            "Value": "",
-            "Description": ""
-        },
-        {
-            "Command": "open",
-            "Target": "https://www.rondo.cz/hra/small-game-daily-top-list",
-            "Value": ""
-        },
-        {
-            "Command": "run",
-            "Target": "Test_Reward",
+            "Target": "Rewards",
             "Value": "",
             "Description": ""
         },

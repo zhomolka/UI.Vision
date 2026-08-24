@@ -1,0 +1,47 @@
+{
+    "Name": "Rewards",
+    "CreationDate": "2026-2-6",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-08-24 10:32:18",
+            "Value": "black",
+            "Description": ""
+        },
+        
+        {
+            "Command": "open",
+            "Target": "https://www.rondo.cz/hra/bubble-breaker/top-list",
+            "Value": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Test_Reward",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "open",
+            "Target": "https://www.rondo.cz/hra/tic-tac-toe/top-list",
+            "Value": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Test_Reward",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "open",
+            "Target": "https://www.rondo.cz/hra/small-game-daily-top-list",
+            "Value": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Test_Reward",
+            "Value": "",
+            "Description": ""
+        }
+        
+    ]
+}
