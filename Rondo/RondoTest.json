@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-11 18:34:05",
+      "Target": "Verze skriptu: 2026-08-27 15:34:25",
       "Value": "black",
       "Description": ""
     },
@@ -588,9 +588,20 @@
     },
     {
       "Command": "echo",
-      "Target": " Hledám text 'správné číslo' ",
+      "Target": " Hledám text 'najdete správné číslo' ",
       "Value": "blue",
       "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
     },
     {
       "Command": "storeText",
