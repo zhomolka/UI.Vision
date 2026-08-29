@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-27 15:34:25",
+      "Target": "Verze skriptu: 2026-08-28 17:24:23",
       "Value": "black",
       "Description": ""
     },
@@ -88,8 +88,8 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "comment",
+      "Target": "XClick // 1500,50",
       "Value": "",
       "Description": "Zavři reklamu"
     },
@@ -192,8 +192,8 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "Comment",
+      "Target": "XClick // 1500,50",
       "Value": "",
       "Description": ""
     },
@@ -1413,8 +1413,8 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "Comment",
+      "Target": "XClick // 1500,50",
       "Value": "",
       "Description": ""
     },
