@@ -1,0 +1,102 @@
+{
+  "Name": "ClickImage",
+  "CreationDate": "2026-3-3",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Verze skriptu: 2026-08-31 15:01:53",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "Rondon.PNG",
+      "Value": "imageName"
+    },
+    {
+      "Command": "store",
+      "Target": "100",
+      "Value": "maxKliknuti"
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "pocet"
+    },
+    {
+      "Command": "while_v2",
+      "Target": "${pocet} < ${maxKliknuti}",
+      "Value": ""
+    },
+    {
+      "Command": "desktopFindImage",
+      "Target": "${imageName}",
+      "Value": "objekt"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${objekt} == \"\"",
+      "Value": ""
+    },
+    {
+      "Command": "break",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "desktopClick",
+      "Target": "${objekt}",
+      "Value": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "${pocet} + 1",
+      "Value": "pocet"
+    },
+    {
+      "Command": "endWhile",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${pocet} == 0",
+      "Value": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "${imageName} nebyl nalezen; nebylo provedeno žádné kliknutí.",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${pocet} == ${maxKliknuti}",
+      "Value": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "Dosažen bezpečnostní limit ${maxKliknuti} kliknutí; ověřte stav hry.",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Kliknuto na ${pocet} objektů podle ${imageName}.",
+      "Value": "green"
+    }
+  ]
+}

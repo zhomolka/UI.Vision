@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-04-20 11:12:03",
+      "Target": "Verze skriptu: 2026-08-31 09:47:21",
       "Value": "black",
       "Description": ""
     },
@@ -70,13 +70,13 @@
     },
     {
       "Command": "XClick",
-      "Target": "725,472",
+      "Target": "910,630",
       "Value": "",
       "Description": "hNOJIVO"
     },
     {
       "Command": "XClick",
-      "Target": "875,468",
+      "Target": "1100,630",
       "Value": "",
       "Description": "Nůžky"
     },
@@ -89,27 +89,16 @@
     },
     {
       "Command": "XClick",
-      "Target": "800,468",
+      "Target": "1000,630",
       "Value": "",
       "Description": "Postřik"
     },
     {
       "Command": "XClick",
-      "Target": "650,468",
-      "Value": "",
-      "Description": "kONEV"
-    },
-    {
-      "Command": "comment",
-      "Target": "XClick // 800,530",
-      "Value": "",
-      "Description": "Postřik"
-    },
-    {
-      "Command": "comment",
-      "Target": "XClick // 650,530",
+      "Target": "810,630",
       "Value": "",
       "Description": "kONEV"
     }
+    
   ]
 }

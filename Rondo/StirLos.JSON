@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-08-02 17:35:22",
+            "Target": "Verze skriptu: 2026-08-31 09:58:15",
             "Value": "black",
             "Description": ""
         },
@@ -116,7 +116,7 @@
         },
         {
             "Command": "store",
-            "Target": "320",
+            "Target": "420",
             "Value": "y",
             "Description": ""
         },
@@ -128,7 +128,7 @@
         },
         {
             "Command": "store",
-            "Target": "710",
+            "Target": "910",
             "Value": "x",
             "Description": ""
         },
@@ -183,7 +183,7 @@
         },
         {
             "Command": "executeScript_Sandbox",
-            "Target": "return Number(${x}) + 18;",
+            "Target": "return Number(${x}) + 21;",
             "Value": "x",
             "Description": ""
         },
@@ -195,7 +195,7 @@
         },
         {
             "Command": "executeScript_Sandbox",
-            "Target": "return Number(${x}) + 28;",
+            "Target": "return Number(${x}) + 33;",
             "Value": "x",
             "Description": ""
         },
@@ -213,17 +213,17 @@
         },
         {
             "Command": "if_v2",
-            "Target": "${y} > 400"
+            "Target": "${y} > 510"
         },
         {
             "Command": "store",
-            "Target": "540",
+            "Target": "780",
             "Value": "y",
             "Description": ""
         },
         {
             "Command": "XClick",
-            "Target": "1500,510",
+            "Target": "1900,654",
             "Value": "",
             "Description": "Zavři reklamu"
         },
@@ -232,7 +232,7 @@
         },
         {
             "Command": "executeScript_Sandbox",
-            "Target": "return Number(${y}) + 140;",
+            "Target": "return Number(${y}) + 180;",
             "Value": "y",
             "Description": ""
         },

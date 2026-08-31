@@ -16,7 +16,7 @@
         },
         {
             "Command": "XClick",
-            "Target": "1500,50",
+            "Target": "1900,15",
             "Value": "",
             "Description": ""
         }

@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-13 10:18:33",
+            "Target": "Verze skriptu: 2026-08-31 10:46:49",
             "Value": "black",
             "Description": ""
         },
@@ -26,8 +26,8 @@
             "Value": "30000"
         },
         {
-            "Command": "XClick",
-            "Target": "1500,50",
+            "Command": "run",
+            "Target": "CloseAd",
             "Value": "",
             "Description": ""
         }
