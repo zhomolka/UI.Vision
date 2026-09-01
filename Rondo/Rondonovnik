@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-31 09:47:21",
+      "Target": "Verze skriptu: 2026-08-31 17:26:58",
       "Value": "black",
       "Description": ""
     },
@@ -16,7 +16,7 @@
     },
     {
       "Command": "pause",
-      "Target": "2000",
+      "Target": "1000",
       "Value": "",
       "Description": ""
     },
@@ -27,26 +27,14 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "880,460",
-      "Value": "",
-      "Description": "Zavření malé spodní reklamy"
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
     },
     {
       "Command": "XClick",
-      "Target": "900,460",
-      "Value": "",
-      "Description": "Zavření malé spodní reklamy"
-    },
-    {
-      "Command": "XClick",
-      "Target": "1100,460",
-      "Value": "",
-      "Description": "Zavření malé spodní reklamy"
-    },
-    {
-      "Command": "XClick",
-      "Target": "1700,480",
+      "Target": "zavrit_reklam.png@0.55",
       "Value": "",
       "Description": "Zavření malé spodní reklamy"
     },
@@ -57,8 +45,14 @@
       "Description": ""
     },
     {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
       "Command": "XClick",
-      "Target": "900,480",
+      "Target": "zavrit.png@0.55",
       "Value": "",
       "Description": "Zavření malé spodní reklamy"
     },
@@ -68,33 +62,38 @@
       "Value": "",
       "Description": ""
     },
-    {
+       {
       "Command": "XClick",
-      "Target": "910,630",
+      "Target": "Hnojivo.png",
       "Value": "",
-      "Description": "hNOJIVO"
+      "Description": ""
     },
-    {
+       {
       "Command": "XClick",
-      "Target": "1100,630",
+      "Target": "Nuzky.png",
       "Value": "",
-      "Description": "Nůžky"
+      "Description": ""
     },
-    
     {
       "Command": "end",
       "Target": "",
       "Value": "",
       "Description": ""
     },
-    {
+       {
       "Command": "XClick",
-      "Target": "1000,630",
+      "Target": "Postrik.png",
       "Value": "",
-      "Description": "Postřik"
+      "Description": ""
+    },
+        {
+      "Command": "XClick",
+      "Target": "Konev.png",
+      "Value": "",
+      "Description": ""
     },
     {
-      "Command": "XClick",
+      "Command": "Comment",
       "Target": "810,630",
       "Value": "",
       "Description": "kONEV"

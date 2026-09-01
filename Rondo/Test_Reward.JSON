@@ -33,17 +33,12 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "1900,15",
+      "Command": "run",
+      "Target": "CloseAd",
       "Value": "",
       "Description": ""
     },
-    {
-      "Command": "echo",
-      "Target": "🟢 Kliknuto na zavření reklamy",
-      "Value": "blue",
-      "Description": ""
-    },
+    
     {
       "Command": "endif",
       "Target": "",

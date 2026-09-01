@@ -4,13 +4,93 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-05-18 10:46:521",
+      "Target": "Verze skriptu: 2026-09-01 14:59:59",
       "Value": "black",
       "Description": ""
     },
     {
       "Command": "open",
       "Target": "https://www.rondo.cz/hra/rondonova-hra",
+      "Value": ""
+    },
+    {
+      "Command": "run",
+      "Target": "ScrollDown",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "pocitadlo"
+    },
+    {
+      "Command": "while_v2",
+      "Target": "${pocitadlo} < 5",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "gainreward.png@0.75",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Obrázek gainreward.png byl nalezen a kliknut.",
+      "Value": "green"
+    },
+    {
+      "Command": "pause",
+      "Target": "30000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "run",
+      "Target": "CloseAd",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "10",
+      "Value": "pocitadlo"
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "❌ Obrázek gainreward.png nebyl nalezen – nekliknuto.",
+      "Value": "red"
+    },
+    {
+      "Command": "pause",
+      "Target": "6000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
       "Value": ""
     },
     {
@@ -119,7 +199,6 @@
       "Target": "0.1",
       "Value": "!timeout_wait"
     },
-    
     {
       "Command": "XClick",
       "Target": "480,620",

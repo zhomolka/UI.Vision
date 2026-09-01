@@ -1,0 +1,30 @@
+{
+    "Name": "ScrollDown",
+    "CreationDate": "2026-3-3",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "Verze skriptu: 2026-09-01 15:38:12",
+            "Value": "black",
+            "Description": ""
+        },
+        {
+            "Command": "times",
+            "Target": "1",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "XClick",
+            "Target": "1900,920",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "end",
+            "Target": "",
+            "Value": "",
+            "Description": ""
+        }
+    ]
+}

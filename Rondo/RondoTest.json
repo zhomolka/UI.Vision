@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-28 17:24:23",
+      "Target": "Verze skriptu: 2026-09-01 11:03:29",
       "Value": "black",
       "Description": ""
     },
@@ -81,6 +81,38 @@
       "Value": "",
       "Description": ""
     },
+
+      {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'HRU VYHR')]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟥 ================  Zvolená hra skončila =================== ",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+ 
      {
       "Command": "storeEval",
       "Target": "new Date().toLocaleString('cs-CZ')",
@@ -88,12 +120,16 @@
       "Description": ""
     },
     {
-      "Command": "comment",
-      "Target": "XClick // 1500,50",
-      "Value": "",
-      "Description": "Zavři reklamu"
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
     },
-    
+    {
+      "Command": "XClick",
+      "Target": "zavrit.png@0.75",
+      "Value": "",
+      "Description": "Zavření malé spodní reklamy"
+    },
     {
       "Command": "echo",
       "Target": "Kontroluji tlačítko ROZTOČIT RONDO ZDARMA v ${lastRun}",
@@ -1413,15 +1449,9 @@
       "Description": ""
     },
     {
-      "Command": "Comment",
-      "Target": "XClick // 1500,50",
+      "Command": "run",
+      "Target": "CloseAd",
       "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 Kliknuto na zavření reklamy",
-      "Value": "blue",
       "Description": ""
     },
     {

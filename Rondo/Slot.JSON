@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-23 13:42:08",
+      "Target": "Verze skriptu: 2026-09-01 11:44:19",
       "Value": "black",
       "Description": ""
     },
@@ -19,6 +19,38 @@
       "Target": "https://www.rondo.cz/hra/slot",
       "Value": ""
     },
+      {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'DOSTUPNÉ OD SILVER')]",
+      "Value": "",
+      "Description": ""
+    },
+    
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟥 ================  Nemáš dostatečnou úroveň (Silver) =================== ",
+      "Value": "red",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "end",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+ 
     {
       "Command": "storeText",
       "Target": "xpath=//span[@class='vip-super-spin__stat-value']",
