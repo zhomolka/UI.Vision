@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-01 11:03:29",
+      "Target": "Verze skriptu: 2026-09-02 11:42:31",
       "Value": "black",
       "Description": ""
     },
@@ -125,10 +125,16 @@
       "Value": "!errorIgnore"
     },
     {
-      "Command": "XClick",
-      "Target": "zavrit.png@0.75",
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait",
+      "Description": "Zkrátí čekání na 1 sekundu"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "var el = [...document.querySelectorAll('span')].find(e => e.textContent.trim() === 'Zavřít reklamu'); if (el) el.click();",
       "Value": "",
-      "Description": "Zavření malé spodní reklamy"
+      "Description": "Klikne na span 'Zavřít reklamu', pokud existuje"
     },
     {
       "Command": "echo",
