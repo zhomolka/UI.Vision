@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-08-31 09:58:15",
+            "Target": "StirLos verze skriptu: 2026-09-03 11:06:08",
             "Value": "black",
             "Description": ""
         },
@@ -222,10 +222,10 @@
             "Description": ""
         },
         {
-            "Command": "XClick",
-            "Target": "1900,654",
+            "Command": "run",
+            "Target": "CloseSmallAd",
             "Value": "",
-            "Description": "Zavři reklamu"
+            "Description": ""
         },
         {
             "Command": "else"

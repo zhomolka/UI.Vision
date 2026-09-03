@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-02 11:42:31",
+      "Target": "Verze skriptu: 2026-09-03 11:03:52",
       "Value": "black",
       "Description": ""
     },
@@ -125,17 +125,12 @@
       "Value": "!errorIgnore"
     },
     {
-      "Command": "store",
-      "Target": "1",
-      "Value": "!timeout_wait",
-      "Description": "Zkrátí čekání na 1 sekundu"
-    },
-    {
-      "Command": "executeScript",
-      "Target": "var el = [...document.querySelectorAll('span')].find(e => e.textContent.trim() === 'Zavřít reklamu'); if (el) el.click();",
+      "Command": "run",
+      "Target": "CloseSmallAd",
       "Value": "",
-      "Description": "Klikne na span 'Zavřít reklamu', pokud existuje"
+      "Description": ""
     },
+    
     {
       "Command": "echo",
       "Target": "Kontroluji tlačítko ROZTOČIT RONDO ZDARMA v ${lastRun}",
@@ -283,6 +278,12 @@
       "Command": "waitForVisible",
       "Target": "xpath=//*[self::button or self::a or @role='button'][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'ZASTAVIT')]",
       "Value": "5000"
+    },
+    {
+      "Command": "run",
+      "Target": "CloseSmallAd",
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "pause",

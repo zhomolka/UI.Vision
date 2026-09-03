@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-31 17:26:58",
+      "Target": "Rondonovnik verze skriptu: 2026-09-03 11:22:14",
       "Value": "black",
       "Description": ""
     },
@@ -33,14 +33,8 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "zavrit_reklam.png@0.55",
-      "Value": "",
-      "Description": "Zavření malé spodní reklamy"
-    },
-    {
-      "Command": "pause",
-      "Target": "2000",
+      "Command": "run",
+      "Target": "CloseSmallAd",
       "Value": "",
       "Description": ""
     },
@@ -49,12 +43,6 @@
       "Target": "true",
       "Value": "!errorIgnore",
       "Description": ""
-    },
-    {
-      "Command": "XClick",
-      "Target": "zavrit.png@0.55",
-      "Value": "",
-      "Description": "Zavření malé spodní reklamy"
     },
     {
       "Command": "times",

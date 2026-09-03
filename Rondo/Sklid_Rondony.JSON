@@ -1,0 +1,53 @@
+{
+  "Name": "Sklid_Rondony",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": "Aby chyba XClick nezastavila skript"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "pokracovat",
+      "Description": "Vstupní podmínka pro první průchod smyčky"
+    },
+    {
+      "Command": "while_v2",
+      "Target": "${pokracovat} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "rondon.png@0.75",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!statusOK}",
+      "Value": "pokracovat",
+      "Description": "Zjistí, jestli poslední XClick uspěl"
+    },
+    {
+      "Command": "pause",
+      "Target": "300",
+      "Value": "",
+      "Description": "Krátká pauza mezi kliky"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "false",
+      "Value": "!errorIgnore",
+      "Description": "Vrátí chování chyb do normálu"
+    }
+  ]
+}

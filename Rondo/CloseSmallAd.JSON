@@ -1,0 +1,25 @@
+{
+    "Name": "CloseSmallAd",
+    "CreationDate": "2026-3-3",
+    "Commands": [
+        {
+            "Command": "echo",
+            "Target": "CloseSmallAd verze skriptu: 2026-09-03 10:58:10",
+            "Value": "black",
+            "Description": ""
+        },
+        {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait",
+      "Description": "Zkrátí čekání na 1 sekundu"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "var el = [...document.querySelectorAll('span')].find(e => e.textContent.trim() === 'Zavřít reklamu'); if (el) el.click();",
+      "Value": "",
+      "Description": "Klikne na span 'Zavřít reklamu', pokud existuje"
+    }
+        
+    ]
+}
