@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Rondonovnik verze skriptu: 2026-09-03 11:22:14",
+      "Target": "Rondonovnik verze skriptu: 2026-09-07 10:52:07",
       "Value": "black",
       "Description": ""
     },
@@ -45,18 +45,51 @@
       "Description": ""
     },
     {
+      "Command": "XClick",
+      "Target": "OKRozumim.png@0.75",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🟢 Obrázek OKRozumim.png byl nalezen a kliknut.",
+      "Value": "green"
+    },
+    
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
       "Command": "times",
       "Target": "3",
       "Value": "",
       "Description": ""
     },
-       {
+    {
       "Command": "XClick",
       "Target": "Hnojivo.png",
       "Value": "",
       "Description": ""
     },
-       {
+    {
+      "Command": "XClick",
+      "Target": "Superhnojivo.png",
+      "Value": "",
+      "Description": ""
+    },
+    {
       "Command": "XClick",
       "Target": "Nuzky.png",
       "Value": "",
@@ -80,12 +113,29 @@
       "Value": "",
       "Description": ""
     },
+{
+      "Command": "XClick",
+      "Target": "OKRozumim.png@0.75",
+      "Value": ""
+    },
     {
-      "Command": "Comment",
-      "Target": "810,630",
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "run",
+      "Target": "Sklid_Rondony",
       "Value": "",
-      "Description": "kONEV"
+      "Description": ""
+    },
+    
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
     }
+    
     
   ]
 }

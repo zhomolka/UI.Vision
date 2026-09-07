@@ -1,71 +1,90 @@
 {
   "Name": "init_variables",
-  "CreationDate": "2026-01-08",
+  "CreationDate": "2026-9-7",
   "Commands": [
     {
       "Command": "echo",
       "Target": "=== Inicializace proměnných ===",
-      "Value": "blue"
+      "Value": "blue",
+      "Description": ""
     },
     {
       "Command": "store",
-      "Target": "https://www.rondo.cz/hra/s/p/jn43woh2i",
-      "Value": "rondoUrl"
+      "Target": "https://www.rondo.cz/hra/s/k7jr1dup4",
+      "Value": "rondoUrl",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "MaxPerformance",
+      "Description": "Maximal Performance"
     },
     {
       "Command": "store",
       "Target": "fast",
-      "Value": "!replayspeed"
+      "Value": "!replayspeed",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "3000",
-      "Value": "timeoutShort"
+      "Value": "timeoutShort",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "8000",
-      "Value": "timeoutMedium"
+      "Value": "timeoutMedium",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "15000",
-      "Value": "timeoutLong"
+      "Value": "timeoutLong",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "true",
-      "Value": "debugMode"
+      "Value": "debugMode",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "false",
-      "Value": "logClicks"
+      "Value": "logClicks",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "false",
-      "Value": "logXPath"
+      "Value": "logXPath",
+      "Description": ""
     },
     {
-      "Command": "store",
-      "Target": "fast",
-      "Value": "runMode"
+      "Command": "comment",
+      "Target": "store // fast",
+      "Value": "runMode",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "false",
-      "Value": "safeMode"
+      "Value": "safeMode",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "true",
-      "Value": "logStartEnd"
+      "Value": "logStartEnd",
+      "Description": ""
     },
     {
       "Command": "store",
       "Target": "true",
-      "Value": "logErrors"
+      "Value": "logErrors",
+      "Description": ""
     }
   ]
 }

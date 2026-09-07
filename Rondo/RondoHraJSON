@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-01 14:59:59",
+      "Target": "Verze skriptu: 2026-09-07 08:25:20",
       "Value": "black",
       "Description": ""
     },
@@ -28,6 +28,12 @@
       "Command": "while_v2",
       "Target": "${pocitadlo} < 5",
       "Value": ""
+    },
+    {
+      "Command": "run",
+      "Target": "CloseSmallAd",
+      "Value": "",
+      "Description": ""
     },
     {
       "Command": "store",

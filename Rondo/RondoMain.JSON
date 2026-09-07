@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-08-24 10:38:12",
+            "Target": "Verze skriptu: 2026-09-07 08:45:46",
             "Value": "black",
             "Description": ""
         },
@@ -38,12 +38,7 @@
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "run",
-            "Target": "SmenitDilky",
-            "Value": "",
-            "Description": ""
-        },
+            
         {
             "Command": "run",
             "Target": "Email",
@@ -75,8 +70,25 @@
             "Description": ""
         },
         {
+            "Command": "if_v2",
+            "Target": "${MaxPerformance} == 1",
+            "Value": ""
+        },
+        {
+            "Command": "run",
+            "Target": "SmenitDilky",
+            "Value": "",
+            "Description": ""
+        },
+        {
             "Command": "run",
             "Target": "VIP",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "endif",
+            "Target": "",
             "Value": "",
             "Description": ""
         },
