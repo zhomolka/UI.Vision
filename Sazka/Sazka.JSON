@@ -1,0 +1,114 @@
+{
+  "Name": "Sazka",
+  "CreationDate": "2026-9-8",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "Sazka verze skriptu: 2026-09-08 09:37:14",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.allwyn.cz/funpark",
+      "Value": "",
+      "Description": "Otevři stránku FunPark"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//span[contains(@class,'button__inner') and contains(normalize-space(.),'Přihlásit')]",
+      "Value": "",
+      "Description": "Klikni na tlačítko Přihlásit"
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "940,620",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "940,620",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "css=button.mwc-close[aria-label='Zavřít']",
+      "Value": "",
+      "Description": "Klikni na zavírací tlačítko modálního okna"
+    },
+    {
+      "Command": "pause",
+      "Target": "1500",
+      "Value": "",
+      "Description": "Krátká prodleva pro doběhnutí UI po zavření modálu"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.querySelector('img.funpark-gamification-menu__gift-wobble') !== null",
+      "Value": "elementExists",
+      "Description": "Ulož do proměnné (přes JS), zda ikona mystery boxu existuje"
+    },
+    {
+      "Command": "if",
+      "Target": "${elementExists} == true",
+      "Value": "",
+      "Description": "Pokud ikona existuje, pokračuj v odemykání mystery boxu"
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=img.funpark-gamification-menu__gift-wobble",
+      "Value": "30000",
+      "Description": "Počkej na ikonu mystery boxu v menu"
+    },
+    {
+      "Command": "click",
+      "Target": "css=img.funpark-gamification-menu__gift-wobble",
+      "Value": "",
+      "Description": "Klikni na mystery box v gamifikačním menu"
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=img.funpark-daily-loot__box-image",
+      "Value": "30000",
+      "Description": "Počkej na obrázek zářícího mystery boxu"
+    },
+    {
+      "Command": "click",
+      "Target": "css=img.funpark-daily-loot__box-image",
+      "Value": "",
+      "Description": "Klikni na zářící mystery box"
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=button.funpark-daily-loot__main-button",
+      "Value": "30000",
+      "Description": "Počkej na tlačítko Vyzvednout"
+    },
+    {
+      "Command": "click",
+      "Target": "css=button.funpark-daily-loot__main-button",
+      "Value": "",
+      "Description": "Klikni na tlačítko Vyzvednout"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "Konec podmínky"
+    }
+  ]
+}
