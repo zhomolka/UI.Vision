@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-03-11 08:50:19",
+      "Target": "Verze skriptu: 2026-09-09 12:36:03",
       "Value": "black",
       "Description": ""
     },
@@ -29,6 +29,18 @@
     {
       "Command": "open",
       "Target": "https://zmail.zoner.com/?_task=mail&_mbox=INBOX",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "800,385",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "800,385",
       "Value": "",
       "Description": ""
     },

@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "CloseSmallAd verze skriptu: 2026-09-05 12:54:16",
+            "Target": "CloseSmallAd verze skriptu: 2026-09-09 11:29:28",
             "Value": "black",
             "Description": ""
         },
@@ -16,10 +16,9 @@
     },
     {
       "Command": "executeScript",
-      "Target": "var el = [...document.querySelectorAll('a, span')].find(e => e.textContent.trim() === 'Zavřít reklamu'); if (el) el.click();",
+      "Target": "var el = [...document.querySelectorAll('a, span')].find(e => e.textContent.trim().toLowerCase() === 'zavřít reklamu'); if (el) el.click();",
       "Value": "",
-      "Description": "Klikne na odkaz nebo span 'Zavřít reklamu', pokud existuje"
+      "Description": "Klikne na odkaz nebo span 'Zavřít reklamu' (case-insensitive), pokud existuje"
     }
-        
     ]
 }
