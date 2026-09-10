@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-08-24 10:28:36",
+      "Target": "Verze skriptu: 2026-09-10 14:43:17",
       "Value": "black"
     },
     {
@@ -17,72 +17,61 @@
       "Target": "Hledám tlačítko 'Otevřít truhlu'",
       "Value": "blue"
     },
-  
-    
-{
-  "Command": "store",
-  "Target": "true",
-  "Value": "!errorIgnore"
-},
-{
-  "Command": "waitForElementPresent",
-  "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
-  "Value": "1000"
-},
-
-{
-  "Command": "verifyElementPresent",
-  "Target": "xpath=//button[contains(@class,'js-rewards-chest-open') and not(@disabled)]",
-  "Value": ""
-},
-{
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore"
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//button[contains(@class,'js-rewards-chest-open')]",
+      "Value": "1000"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//button[contains(@class,'js-rewards-chest-open') and not(@disabled)]",
+      "Value": ""
+    },
+    {
       "Command": "if_v2",
       "Target": "${!LastCommandOK} == true"
     },
-
-
-{
-  "Command": "echo",
-  "Target": "Tlačítko Otevřít truhlu je ENABLED – klikám",
-  "Value": "green"
-},
-{
-  "Command": "else"
-},
-{
-  "Command": "echo",
-  "Target": "Tlačítko Otevřít truhlu je DISABLED nebo neexistuje",
-  "Value": "red"
-},
-{
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Otevřít truhlu je ENABLED – klikám",
+      "Value": "green"
+    },
+    {
+      "Command": "else"
+    },
+    {
+      "Command": "echo",
+      "Target": "Tlačítko Otevřít truhlu je DISABLED nebo neexistuje",
+      "Value": "red"
+    },
+    {
       "Command": "gotoLabel",
       "Target": "end",
       "Value": ""
     },
-{
-  "Command": "endif"
-},
-
-
- {
+    {
+      "Command": "endif"
+    },
+    {
       "Command": "label",
       "Target": "open",
       "Value": ""
     },
-
-
     {
       "Command": "pause",
       "Target": "2000",
       "Value": ""
     },
-
     {
       "Command": "storeText",
       "Target": "xpath=//a[contains(@class,'myprofile-v3-loyalty-modal__accept')]",
       "Value": "foundText2"
     },
-
     {
       "Command": "if_v2",
       "Target": "${foundText2}.length > 0",
@@ -102,53 +91,51 @@
       "Command": "endif"
     },
     {
-  "Command": "waitForElementPresent",
-  "Target": "xpath=//span[contains(@class,'rondo-ntf-text') and contains(text(),'Odměnu se')]",
-  "Value": "10000"
-},
-{
-  "Command": "verifyText",
-  "Target": "xpath=//span[contains(@class,'rondo-ntf-text')]",
-  "Value": "Odměnu se"
-},
-{
-  "Command": "store",
-  "Target": "${!LastCommandOK}",
-  "Value": "rewardErrorShown"
-},
-{
-  "Command": "echo",
-  "Target": "rewardErrorShown = ${rewardErrorShown}",
-  "Value": "blue"
-},
-{
-  "Command": "if_v2",
-  "Target": "true == ${rewardErrorShown}",
-  "Value": ""
-},
-{
-  "Command": "echo",
-  "Target": "Chybová hláška JE zobrazená",
-  "Value": "red"
-},
-{
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//span[contains(@class,'rondo-ntf-text') and contains(text(),'Odměnu se')]",
+      "Value": "10000"
+    },
+    {
+      "Command": "verifyText",
+      "Target": "xpath=//span[contains(@class,'rondo-ntf-text')]",
+      "Value": "Odměnu se"
+    },
+    {
+      "Command": "store",
+      "Target": "${!LastCommandOK}",
+      "Value": "rewardErrorShown"
+    },
+    {
+      "Command": "echo",
+      "Target": "rewardErrorShown = ${rewardErrorShown}",
+      "Value": "blue"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "true == ${rewardErrorShown}",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Chybová hláška JE zobrazená",
+      "Value": "red"
+    },
+    {
       "Command": "gotoLabel",
       "Target": "open",
       "Value": ""
     },
-{
-  "Command": "else"
-},
-{
-  "Command": "echo",
-  "Target": "Chybová hláška NENÍ zobrazená",
-  "Value": "green"
-},
-{
-  "Command": "endif"
-},
-
-
+    {
+      "Command": "else"
+    },
+    {
+      "Command": "echo",
+      "Target": "Chybová hláška NENÍ zobrazená",
+      "Value": "green"
+    },
+    {
+      "Command": "endif"
+    },
     {
       "Command": "label",
       "Target": "end",
@@ -158,6 +145,66 @@
       "Command": "echo",
       "Target": "Hotovo",
       "Value": "green"
+    },
+      {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/soutez/vip/20-000kc",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.querySelector(\"a.rondo-tournament__button[href='/soutez/vip/20-000kc?do=registerTournament']\") !== null",
+      "Value": "tournamentButtonExists",
+      "Description": "Ulož do proměnné, zda tlačítko 'Přihlásit se do soutěže' existuje"
+    },
+    {
+      "Command": "if",
+      "Target": "${tournamentButtonExists} == true",
+      "Value": "",
+      "Description": "Pokud tlačítko existuje, klikni na něj"
+    },
+    {
+      "Command": "click",
+      "Target": "css=a.rondo-tournament__button[href='/soutez/vip/20-000kc?do=registerTournament']",
+      "Value": "",
+      "Description": "Klikni na tlačítko Přihlásit se do soutěže"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "Konec podmínky if"
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.rondo.cz/soutez/vip/10-000kc",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "document.querySelector(\"a.rondo-tournament__button[href='/soutez/vip/10-000kc?do=registerTournament']\") !== null",
+      "Value": "tournamentButtonExists",
+      "Description": "Ulož do proměnné, zda tlačítko 'Přihlásit se do soutěže' existuje"
+    },
+    {
+      "Command": "if",
+      "Target": "${tournamentButtonExists} == true",
+      "Value": "",
+      "Description": "Pokud tlačítko existuje, klikni na něj"
+    },
+    {
+      "Command": "click",
+      "Target": "css=a.rondo-tournament__button[href='/soutez/vip/10-000kc?do=registerTournament']",
+      "Value": "",
+      "Description": "Klikni na tlačítko Přihlásit se do soutěže"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "Konec podmínky if"
     }
   ]
 }
