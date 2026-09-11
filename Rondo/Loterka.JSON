@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-06-29 09:28:53",
+      "Target": "Verze skriptu: 2026-09-11 09:50:39",
       "Value": "black",
       "Description": ""
     },
@@ -105,10 +105,10 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "1500,50",
+      "Command": "run",
+      "Target": "CloseAd",
       "Value": "",
-      "Description": "Zavři informační okno"
+      "Description": ""
     },
     {
       "Command": "end",
