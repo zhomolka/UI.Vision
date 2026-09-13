@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Sazka verze skriptu: 2026-09-08 09:37:14",
+      "Target": "Sazka verze skriptu: 2026-09-13 12:48:31",
       "Value": "black",
       "Description": ""
     },
@@ -13,6 +13,24 @@
       "Target": "https://www.allwyn.cz/funpark",
       "Value": "",
       "Description": "Otevři stránku FunPark"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "css=use[*|href='/frontend/img/system-icons/funpark-cross.svg#funpark-cross']",
+      "Value": "",
+      "Description": "Klikni na ikonu křížku (zavření) přes SVG use element"
+    },
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": "!errorIgnore",
+      "Description": ""
     },
     {
       "Command": "click",
@@ -25,6 +43,12 @@
       "Target": "3000",
       "Value": "",
       "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "css=use[*|href='/frontend/img/system-icons/funpark-cross.svg#funpark-cross']",
+      "Value": "",
+      "Description": "Klikni na ikonu křížku (zavření) přes SVG use element"
     },
     {
       "Command": "XClick",
