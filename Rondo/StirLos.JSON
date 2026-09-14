@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "StirLos verze skriptu: 2026-09-03 11:06:08",
+            "Target": "StirLos verze skriptu: 2026-09-14 12:01:51",
             "Value": "black",
             "Description": ""
         },
@@ -115,6 +115,12 @@
             "Description": ""
         },
         {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+        {
             "Command": "store",
             "Target": "420",
             "Value": "y",
@@ -217,7 +223,7 @@
         },
         {
             "Command": "store",
-            "Target": "780",
+            "Target": "750",
             "Value": "y",
             "Description": ""
         },
