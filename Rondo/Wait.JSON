@@ -9,14 +9,20 @@
             "Description": "Hlasitější beep"
         },
         {
+            "Command": "store",
+            "Target": "true",
+            "Value": "!errorIgnore",
+            "Description": ""
+        },
+        {
             "Command": "prompt",
             "Target": "Stiskni Confirm pro pokračování",
             "Value": "userInput",
             "Description": ""
         },
         {
-            "Command": "XClick",
-            "Target": "1900,15",
+            "Command": "run",
+            "Target": "CloseAd",
             "Value": "",
             "Description": ""
         }
