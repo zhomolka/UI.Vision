@@ -1,0 +1,78 @@
+{
+  "Name": "AllwynCtenar",
+  "CreationDate": "2026-9-29",
+  "Commands": [
+    {
+      "Command": "echo",
+      "Target": "AllwynCtenar verze skriptu: 2026-09-29 15:33:24",
+      "Value": "black",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!timeout_wait",
+      "Description": "Zkrátí čekání na 1 sekundu"
+    },
+    {
+      "Command": "store",
+      "Target": "https://www.allwyn.cz/hry/nase-kancelar",
+      "Value": "startUrl",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${startUrl}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var as=document.querySelectorAll('a'); var out=[]; for(var i=0;i<as.length;i++){var h=as[i].href||''; if(h.indexOf('/hry/')>-1){out.push(h);} } return out;",
+      "Value": "links",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Nalezeno ${links.length} položek",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "times",
+      "Target": "${links.length}",
+      "Value": "index",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return links[index];",
+      "Value": "currentLink",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Otevírám: ${currentLink}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${currentLink}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "index"
+    }
+  ]
+}

@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-03 11:03:52",
+      "Target": "Verze skriptu: 2026-09-29 13:04:32",
       "Value": "black",
       "Description": ""
     },
@@ -492,6 +492,24 @@
       "Description": ""
     },
     {
+      "Command": "if_v2",
+      "Target": "${MaxPerformance} == 0",
+      "Value": "",
+      "Description": "Pokud nechci maximální počet Rondonů, nechoď na zdvojnásobit reklamou"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "TestHer",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
       "Command": "store",
       "Target": "true",
       "Value": "!errorIgnore",
@@ -558,6 +576,12 @@
     {
       "Command": "endif",
       "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "TestHer",
       "Value": "",
       "Description": ""
     },

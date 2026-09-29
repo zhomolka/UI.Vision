@@ -4,7 +4,7 @@
   "Commands": [
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-11 09:50:39",
+      "Target": "Verze skriptu: 2026-09-29 15:17:26",
       "Value": "black",
       "Description": ""
     },
@@ -70,9 +70,9 @@
     },
     {
       "Command": "if_v2",
-      "Target": "${priceText}",
-      "Value": "contains=Limit vy",
-      "Description": ""
+      "Target": "${priceText}.indexOf('Limit vy') >= 0",
+      "Value": "",
+      "Description": "Test, zda cena hlásí vyčerpaný limit"
     },
     {
       "Command": "echo",

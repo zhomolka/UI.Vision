@@ -10,7 +10,7 @@
     },
     {
       "Command": "echo",
-      "Target": "Verze skriptu: 2026-09-09 12:36:03",
+      "Target": "Verze skriptu: 2026-09-29 12:39:36",
       "Value": "black",
       "Description": ""
     },
@@ -33,16 +33,46 @@
       "Description": ""
     },
     {
-      "Command": "XClick",
-      "Target": "800,385",
+      "Command": "pause",
+      "Target": "1500",
       "Value": "",
-      "Description": ""
+      "Description": "Krátká prodleva, aby se titulek stránky stihl aktualizovat"
+    },
+    {
+      "Command": "storeTitle",
+      "Target": "",
+      "Value": "pageTitle",
+      "Description": "Ulož aktuální titulek stránky"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${pageTitle}.indexOf('Zmail :: INBOX') == -1",
+      "Value": "",
+      "Description": "Pokud NEJSME na INBOX (= je potřeba se přihlásit)"
     },
     {
       "Command": "XClick",
       "Target": "800,385",
       "Value": "",
-      "Description": ""
+      "Description": "Potvrzovací klik pro přihlášení"
+    },
+    {
+      "Command": "XClick",
+      "Target": "800,385",
+      "Value": "",
+      "Description": "Potvrzovací klik pro přihlášení (2×)"
+    },
+    {
+      "Command": "pause",
+      "Target": "1500",
+      "Value": "",
+      "Description": "Počkej, než se po přihlášení stránka překreslí"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": "Konec podmínky if"
     },
     {
       "Command": "store",
@@ -117,113 +147,156 @@
       "Description": ""
     },
     {
-      "Command": "storeEval",
-      "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "Kontrola Vyzvednout v ${lastRun}",
-      "Value": "blue",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "1.5",
-      "Value": "!timeout_wait",
-      "Description": ""
-    },
-    {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "click",
-      "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 klikám na VYZVEDNOUT v ${lastRun}",
-      "Value": "green",
-      "Description": ""
-    },
-    {
-      "Command": "else",
-      "Target": "",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "storeEval",
-      "Target": "new Date().toLocaleString('cs-CZ')",
-      "Value": "lastRun",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "Kontrola Otevřít dárek v ${lastRun}",
-      "Value": "blue",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "1.5",
-      "Value": "!timeout_wait",
-      "Description": ""
-    },
-    {
-      "Command": "verifyElementPresent",
-      "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "if_v2",
-      "Target": "${!LastCommandOK} == true",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "click",
-      "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "🟢 klikám na OTEVŘÍT DÁREK v ${lastRun}",
-      "Value": "green",
-      "Description": ""
-    },
-    {
-      "Command": "endif",
-      "Target": "",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "endif",
-      "Target": "",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "selectWindow",
-      "Target": "tab=1",
-      "Value": "",
-      "Description": ""
-    },
+  "Command": "store",
+  "Target": "false",
+  "Value": "rewardClicked",
+  "Description": "Výchozí stav – žádná odměna zatím nekliknuta"
+},
+{
+  "Command": "storeEval",
+  "Target": "new Date().toLocaleString('cs-CZ')",
+  "Value": "lastRun",
+  "Description": ""
+},
+{
+  "Command": "echo",
+  "Target": "Kontrola Vyzvednout v ${lastRun}",
+  "Value": "blue",
+  "Description": ""
+},
+{
+  "Command": "store",
+  "Target": "1.5",
+  "Value": "!timeout_wait",
+  "Description": ""
+},
+{
+  "Command": "verifyElementPresent",
+  "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == true",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "click",
+  "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'VYZVEDNOUT')]",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "echo",
+  "Target": "🟢 klikám na VYZVEDNOUT v ${lastRun}",
+  "Value": "green",
+  "Description": ""
+},
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "rewardClicked",
+  "Description": ""
+},
+{
+  "Command": "else",
+  "Target": "",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "storeEval",
+  "Target": "new Date().toLocaleString('cs-CZ')",
+  "Value": "lastRun",
+  "Description": ""
+},
+{
+  "Command": "echo",
+  "Target": "Kontrola Otevřít dárek v ${lastRun}",
+  "Value": "blue",
+  "Description": ""
+},
+{
+  "Command": "store",
+  "Target": "1.5",
+  "Value": "!timeout_wait",
+  "Description": ""
+},
+{
+  "Command": "verifyElementPresent",
+  "Target": "xpath=//*[self::button or self::a or @role='button'][not(@disabled)][not(contains(@class,'disabled'))][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "if_v2",
+  "Target": "${!LastCommandOK} == true",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "click",
+  "Target": "xpath=//*[self::button or self::a][contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyzěščřžýáíéúů', 'ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉÚŮ'), 'OTEVŘÍT DÁREK')]",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "echo",
+  "Target": "🟢 klikám na OTEVŘÍT DÁREK v ${lastRun}",
+  "Value": "green",
+  "Description": ""
+},
+{
+  "Command": "store",
+  "Target": "true",
+  "Value": "rewardClicked",
+  "Description": ""
+},
+{
+  "Command": "endif",
+  "Target": "",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "endif",
+  "Target": "",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "if_v2",
+  "Target": "${rewardClicked} == false",
+  "Value": "",
+  "Description": "Ani jedno tlačítko odměny nebylo nalezeno – tento e-mail nemá standardní odměnu, přeskoč zbytek"
+},
+{
+  "Command": "echo",
+  "Target": "⚠️ E-mail bez rozpoznaného tlačítka odměny (VYZVEDNOUT/OTEVŘÍT DÁREK). Přeskakuji zpracování.",
+  "Value": "orange",
+  "Description": ""
+},
+{
+  "Command": "gotoLabel",
+  "Target": "END",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "endif",
+  "Target": "",
+  "Value": "",
+  "Description": ""
+},
+{
+  "Command": "selectWindow",
+  "Target": "tab=1",
+  "Value": "",
+  "Description": ""
+},
+
     {
       "Command": "waitForPageToLoad",
       "Target": "2000",

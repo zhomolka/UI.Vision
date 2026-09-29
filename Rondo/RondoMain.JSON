@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-09-07 08:45:46",
+            "Target": "Verze skriptu: 2026-09-29 15:30:10",
             "Value": "black",
             "Description": ""
         },
@@ -45,12 +45,7 @@
             "Value": "",
             "Description": ""
         },
-        {
-            "Command": "run",
-            "Target": "Rewards",
-            "Value": "",
-            "Description": ""
-        },
+        
         {
             "Command": "run",
             "Target": "Slot",
@@ -83,6 +78,12 @@
         {
             "Command": "run",
             "Target": "VIP",
+            "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "run",
+            "Target": "Rewards",
             "Value": "",
             "Description": ""
         },
