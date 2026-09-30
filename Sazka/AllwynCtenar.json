@@ -3,76 +3,194 @@
   "CreationDate": "2026-9-29",
   "Commands": [
     {
-      "Command": "echo",
-      "Target": "AllwynCtenar verze skriptu: 2026-09-29 15:33:24",
-      "Value": "black",
-      "Description": ""
-    },
-    {
-      "Command": "store",
-      "Target": "1",
-      "Value": "!timeout_wait",
-      "Description": "Zkrátí čekání na 1 sekundu"
-    },
-    {
-      "Command": "store",
-      "Target": "https://www.allwyn.cz/hry/nase-kancelar",
-      "Value": "startUrl",
-      "Description": ""
-    },
-    {
       "Command": "open",
-      "Target": "${startUrl}",
+      "Target": "https://www.allwyn.cz/hry/nase-kancelar",
       "Value": "",
       "Description": ""
     },
     {
-      "Command": "executeScript_Sandbox",
-      "Target": "var as=document.querySelectorAll('a'); var out=[]; for(var i=0;i<as.length;i++){var h=as[i].href||''; if(h.indexOf('/hry/')>-1){out.push(h);} } return out;",
-      "Value": "links",
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//a[contains(@class,'office-card')]",
+      "Value": "10000",
+      "Description": ""
+    },
+    {
+      "Command": "storeXpathCount",
+      "Target": "xpath=//a[contains(@class,'office-card')]",
+      "Value": "articleCount",
       "Description": ""
     },
     {
       "Command": "echo",
-      "Target": "Nalezeno ${links.length} položek",
+      "Target": "Nalezeno článků: ${articleCount}",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "times",
-      "Target": "${links.length}",
-      "Value": "index",
-      "Description": ""
-    },
-    {
-      "Command": "executeScript_Sandbox",
-      "Target": "return links[index];",
-      "Value": "currentLink",
-      "Description": ""
-    },
-    {
-      "Command": "echo",
-      "Target": "Otevírám: ${currentLink}",
+      "Target": "${articleCount}",
       "Value": "",
       "Description": ""
     },
     {
-      "Command": "open",
-      "Target": "${currentLink}",
+      "Command": "storeText",
+      "Target": "xpath=(//div[contains(@class,'office-card__date')])[${!times}]",
+      "Value": "rawDate",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "RAW: ${rawDate}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Datum článku: ${rawDate}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "var d='${rawDate}'; var p=d.split('.'); var day=parseInt(p[0]); var month=parseInt(p[1]); var year=new Date().getFullYear(); var dt=new Date(year, month-1, day); dt.getTime();",
+      "Value": "articleTs"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "Date.now()",
+      "Value": "nowTs"
+    },
+    {
+      "Command": "echo",
+      "Target": "articleTs: ${articleTs}"
+    },
+    {
+      "Command": "echo",
+      "Target": "nowTs: ${nowTs}"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "var a=${articleTs}; var b=${nowTs}; b-a;",
+      "Value": "diffTs"
+    },
+    
+    {
+      "Command": "echo",
+      "Target": "diffTs: ${diffTs}"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "7*24*60*60*1000",
+      "Value": "weekMs",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "articleTs: ${articleTs}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "nowTs: ${nowTs}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "weekMs: ${weekMs}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "${nowTs}-${articleTs}",
+      "Value": "diffTs",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "diffTs: ${diffTs}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${nowTs}-${articleTs} >= ${weekMs}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Článek ${!times} je starší než týden → ukončuji skript",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "ENDSCRIPT",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Článek ${!times} je mladší než týden → otevírám",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//a[contains(@class,'office-card')])[${!times}]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "pause",
-      "Target": "1500",
+      "Target": "2000",
       "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.allwyn.cz/hry/nase-kancelar",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//a[contains(@class,'office-card')]",
+      "Value": "10000",
       "Description": ""
     },
     {
       "Command": "end",
       "Target": "",
       "Value": "",
-      "Description": "index"
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "ENDSCRIPT",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Skript byl ukončen.",
+      "Value": "",
+      "Description": ""
     }
   ]
 }
