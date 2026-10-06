@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-04-29 10:21:52",
+            "Target": "Verze skriptu: 2026-10-06 10:32:27",
             "Value": "black",
             "Description": ""
         },
@@ -97,6 +97,12 @@
             "Value": ""
         },
         {
+            "Command": "store",
+            "Target": "3",
+            "Value": "!timeout_wait",
+            "Description": "Prodloužený timeout pro první kontrolu FREE tlačítka (může se objevit se zpožděním)"
+        },
+        {
             "Command": "label",
             "Target": "start",
             "Value": "",
@@ -131,6 +137,12 @@
             "Target": "",
             "Value": "",
             "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "1.5",
+            "Value": "!timeout_wait",
+            "Description": "Vrátit timeout zpět na standardní hodnotu pro další kroky"
         },
         {
             "Command": "click",
