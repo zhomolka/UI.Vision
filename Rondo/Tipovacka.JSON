@@ -4,7 +4,7 @@
     "Commands": [
         {
             "Command": "echo",
-            "Target": "Verze skriptu: 2026-08-17 11:46:26",
+            "Target": "Verze skriptu: 2026-10-26 13:32:39",
             "Value": "black",
             "Description": ""
         },
@@ -12,6 +12,12 @@
             "Command": "label",
             "Target": "start",
             "Value": "",
+            "Description": ""
+        },
+        {
+            "Command": "store",
+            "Target": "3",
+            "Value": "!timeout_wait",
             "Description": ""
         },
         {
@@ -23,7 +29,7 @@
         
         {
             "Command": "store",
-            "Target": "1",
+            "Target": "3",
             "Value": "!timeout_wait",
             "Description": ""
         },
@@ -123,23 +129,12 @@
         },
         {
             "Command": "pause",
-            "Target": "6000",
+            "Target": "5000",
             "Value": "",
             "Description": ""
         },
         
-        {
-            "Command": "pause",
-            "Target": "5000",
-            "Value": "",
-            "Description": ""
-        },
-               {
-            "Command": "pause",
-            "Target": "5000",
-            "Value": "",
-            "Description": ""
-        },
+    
         {
             "Command": "XClick",
             "Target": "1500,50",
